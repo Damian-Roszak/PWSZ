@@ -1,0 +1,94 @@
+===============1) Napisz polecenie, które obliczy liczbę słów w pliku /var/log/messages.
+
+Ad.1. wc -w /var/log/messages
+
+
+
+===================2) Napisz (jedno lub więcej poleceń), aby:
+
+ utworzyć pusty plik o nazwie czas,
+ zmienić czas ostatniego dostępu do pliku czas na południe w dniu 2014-03-14
+ 
+Ad.2.   touch -t 201403141200 czas
+
+
+ 
+=======================3) Napisz polecenie, które znajduje w całym systemie plików wszystkie pliki o nazwie pasującej do wzorca *.conf i wyświetla te nazwy na konsoli.
+Czy wynik wyszukiwania z wzorcem *.c*nf będzie taki sam? Odpowiedź na to pytanie (z uzasadnieniem) przedstaw jako komentarz powłoki.
+
+Ad.3.   find / -type f -name "*.conf"
+# * (gwiazdka) oznacza dowolną ilość dowolnych znaków (tj. dozwolonych w nazwach plików przez system) co w wyszukiwaniu wg wzorca
+# "*.conf" oznacza - znajdź wszystkie pliki, które kończą się znakami (bez gwiazdki) ".conf"
+# czyli po windowsowemu z rozszerzeniem .conf
+# Natomiast wyniki dla wzorca "*.c*nf" będzie zupełnie inny, z względu na własność 
+# znaku gwiazdki dla polecenia find, zgodnie z powyższym, polecenie find będzie
+# szukać plików, które zaczynają się dowolnymi znakami w dowolnej ilośći, następnie zawierają
+# znaki ".c" (kropka i litera 'c'), następnie znów zawierać będą dowolną ilość dowolnych znaków i kończyć się literami 'n' i 'f'.
+
+
+===================4) Napisz 1-wierszowe polecenie, które wyświetli liczbą znaków w pliku /etc/group.
+
+Ad.4.   wc -m /etc/group
+
+
+
+
+=====================5) Napisz polecenie, które wyświetli informację:
+
+Liczba kont w systemie = ##
+gdzie ## oznacza obliczoną liczbę kont wszystkich użytkowników systemu
+
+Ad.5. 
+# Dla zwiększenia prawdopodobieństwa zgodności poleceń między wersjami systemu Linux
+# podaję dwie możliwości na wykonanie zadania:
+# opcja 1:
+echo -n "Liczba kont w systemie = " && getent passwd | wc -l
+
+# opcja 2:
+echo -n "Liczba kont w systemie = " && cat /etc/passwd | wc -l
+
+
+
+=====================6) Napisz 1-wierszowe polecenie, które: w katalogu /kosmos/magazyn utworzy pusty plik o nazwie schowek.
+
+Brakujące katalogi mają być tworzone automatycznie.
+
+
+Ad.6.  sudo mkdir -p /kosmos/magazyn && sudo touch /kosmos/magazyn/schowek
+
+
+
+
+
+======================7) Napisz jednowierszowe polecenie, które wyświetli liczbę kont, których nazwa rozpoczyna się literą 's'.
+
+
+Ad.7. 
+cut -d: -f1 /etc/passwd | grep ^s | wc -w
+
+NOWE: cut -d: -f1 /etc/passwd | grep -c -x "s.*"
+
+===========================8) Napisz polecenie, które wyświetli zawartość pliku /etc/passwd bez podziału na ekrany.
+W formie komentarza powłoki zwięźle opisz przeznaczenie kolejnych pól rekordów pliku /etc/passwd (każde pole w osobnym wierszu komentarza).
+
+cat /etc/passwd
+# Plik /etc/passwd jest bazą użytkowników. W bazie tej zawarte są podstawowe dane o
+# każdym z użytkowników, takie jak nazwa użytkownika, numer, grupa, do której należy,
+# krótki opis, katalog domowy oraz powłoka, której używa. 
+# Wpisy w pliku /etc/passwd mają następującą strukturę:
+#
+# Username:Password:UID:GID:Gecos:HomeDirectory:Shell
+#
+# przykład:
+# root:x:0:0:root:/root:/bin/bash
+#
+# Username nazwa użytkownika w systemie.
+# Password hasło często kodowane algorytmem DES, w systemach z shadow zazwyczaj x.
+# UID numer użytkownika.
+# GID numer głównej grupy.
+# Gecos pole komentarza, zwane też polem GECOS zawiera dodatkowe informacje o
+# użytkowniku, składa się z czterech pól oddzielonych przecinkami: imię z nazwiskiem,
+# adres/położenie biura, telefon w pracy, telefon domowy. Pole GECOS nie jest
+# obowiązkowe.
+# HomeDirectory katalog domowy użytkownika.
+# Shell domyślny interpreter poleceń, tzw. powłoka systemu
