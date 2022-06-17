@@ -1,0 +1,2 @@
+modyfing monopoly
+static methods
