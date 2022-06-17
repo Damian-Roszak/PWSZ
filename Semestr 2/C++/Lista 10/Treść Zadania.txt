@@ -1,0 +1,11 @@
+Zadanie 1 (20 pkt)
+Napisz program, który będzie pozwalał na realizację następujących operacji na macierzach
+dwuwymiarowych (liczb całkowitych):
+ - dodawanie
+ - odejmowanie
+ - mnożenie
+ - negacja (wartości ujemne)
+ - porównywanie (pod uwagę bierzemy sumę elementów macierzy)
+Rozwiązanie powinno oczywiście wykorzystywać mechanizm przeładowania operatorów. W
+programie głównym pozwól wprowadzić takie macierze oraz przedstaw działanie przeładowanych
+operatorów.
