@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+.data {
+  width: 50%;
+  height: 50%;
+  overflow-y: auto;
+}
+.inputs {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.data-table {
+  width: 100%;
+}
