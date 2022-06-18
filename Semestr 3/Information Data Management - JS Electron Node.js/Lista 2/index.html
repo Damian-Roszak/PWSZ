@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+  <h1>ZDINF Lista 2 </h1>
+  <div class="wrapper">
+    <div class="data">
+      <table id='data_table' class="data-table">
+      </table>
+    </div>
+    <div class="inputs">
+      <input type="text" id="input_imie" pattern="^[A-Z]\w+">
+      <button onclick="addRow()">Dodaj Nowy Wiersz</button>
+      <input type="text" id="row_no" pattern="^\d+">
+      <button onclick="delRow()">Usuń Wiersz</button>
+      <button onclick="saveData()">Zapisz dane</button>
+      <button onclick="loadData()">Odczytaj dane</button>
+      <input type="text" id="rand_no" pattern="^\d+">
+      <button onclick="randomData()">Dane losowe</button>
+    </div>
+  </div>
+  <script src="code.js"></script>
+</body>
+</html>
