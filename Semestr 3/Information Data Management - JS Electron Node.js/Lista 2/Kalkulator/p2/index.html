@@ -1,0 +1,22 @@
+<html>
+<title> Square Root Calculator in JavaScript</title>
+<head>
+<script type="text/javascript">
+function doMath(){
+var inputNum1=document.form1.input1.value;
+var result = Math.sqrt(inputNum1);
+document.form1.answer.value = result;
+}
+</script>
+</head>
+<body>
+<form name=form1>
+Enter Number:
+<input type="text" name="input1" size=10>
+<input type="button" value="Calculate" onClick='doMath()'>
+<br>
+The square root is:
+<input type="text" name="answer" size=20>
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Lab1z",
+  "version": "1.0.0",
+  "description": "Zadanie domowe ZDINF - kalkulator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "echo \"Error: no test specified\" && exit 1",
+  "keywords": [],
+  "author": "Damian Roszak",
+  "license": "Wszystkie prawa zastrzeżone",
+  "devDependencies": {
+    "electron": "^15.1.2"
+  }
+}

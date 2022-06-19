@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="./styles.css" rel="stylesheet">
+     -->    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Damian Roszak - kalkulator ZDINF</h1>
+    <p id="screen">0</p>
+    <button onclick="a()" class="przycisk" >1</button>
+    <button onclick="b()" class="przycisk" >2</button>
+    <button onclick="c()" class="przycisk" >3</button>
+    <button onclick="star()" class="przycisk" >*</button>
+    <button onclick="czysc()" class="przycisk przyciskP" >CLEAR</button>
+    <br>
+    <button onclick="d()" class="przycisk" >4</button>
+    <button onclick="e()" class="przycisk" >5</button>
+    <button onclick="f()" class="przycisk" >6</button>
+    <button onclick="dziel()" class="przycisk" >/</button>
+    <button onclick="backspace()" class="przycisk przyciskP BS" >BackSpace</button>
+    <br>
+    <button onclick="g()" class="przycisk" >7</button>
+    <button onclick="h()" class="przycisk" >8</button>
+    <button onclick="i()" class="przycisk" >9</button>
+    <button onclick="plus()" class="przycisk" >+</button>
+    <br>
+    <button onclick="j()" class="przycisk" >0</button>
+    <button onclick="wynik()" class="przycisk" >=</button>
+    <button onclick="pierw()" class="przycisk" >&radic;</button>
+    <button onclick="odejm()" class="przycisk" >-</button>
+    <button onclick="pusty()" class="przycisk przyciskP" >PUSTY</button>
+    <script>
+    var dzialanie;
+    function wynik(){
+            var exp = document.getElementById("screen").innerHTML;
+	    if(exp)      
+	    {  
+		exp.innerHTML = eval(exp);  
+	    } 
+    }
+    function pierw(){
+       //var exp = document.form1.textview.value;        
+            const a = document.getElementById("screen");
+       a.innerHTML = Math.sqrt(a.innerHTML);    
+       
+      	    /* if (a.innerHTML=="0" )
+                  a.innerHTML="&#8730;"; 
+            else 
+            {            
+                  dzialanie = "*";
+                  a.innerHTML = a.innerHTML + "&#8730;";
+            }*/
+    }
+    function backspace()  
+    {  
+	    const a = document.getElementById("screen");  
+	    var b = a.innerHTML;
+	   /* a.innerHTML = b.substring(0, b.length - 1); */
+	    a.innerHTML = a.innerHTML.substring(0, a.innerHTML.length - 1);      
+    }  
+   	function star(){
+            const a = document.getElementById("screen");
+           // dzialanie = "+";
+          if (a.innerHTML=="0" )
+                  a.innerHTML="*"; 
+            else 
+            {            
+                  dzialanie = "*";
+                  a.innerHTML=a.innerHTML+"*"; 
+            }
+        }
+   	function odejm(){
+            const a = document.getElementById("screen");
+            dzialanie = "-";
+          if (a.innerHTML=="0" )
+                  a.innerHTML="-"; 
+            else 
+            {            
+                  dzialanie = "-";
+                  a.innerHTML=a.innerHTML+"-"; 
+            }
+          /*  if (a.innerHTML=="0" )
+                  a.innerHTML="-"; 
+            else 
+            {
+            if (a.innerHTML[a.innerHTML.length] == "-")  a.innerHTML=a.innerHTML+"(";
+                  dzialanie = "-";
+                  a.innerHTML=a.innerHTML+"-"; 
+            }*/
+        }
+   	function plus(){
+            const a = document.getElementById("screen");
+            dzialanie = "+";
+          if (a.innerHTML=="0" )
+                  a.innerHTML="+"; 
+            else 
+            {            
+                  dzialanie = "+";
+                  a.innerHTML=a.innerHTML+"+"; 
+            }
+        }
+   	function dziel(){
+            const a = document.getElementById("screen");
+           // dzialanie = "/";
+          if (a.innerHTML=="0" )
+                  a.innerHTML="/"; 
+            else 
+            {            
+                  dzialanie = "/";
+                  a.innerHTML=a.innerHTML+"/"; 
+            }
+        }
+        function a(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="1"; 
+            else 
+                  a.innerHTML=a.innerHTML+"1"; 
+        }
+        function b(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="2"; 
+            else 
+                  a.innerHTML=a.innerHTML+"2"; 
+        }
+        function c(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="3"; 
+            else 
+                  a.innerHTML=a.innerHTML+"3"; 
+        }
+        function d(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="4"; 
+            else 
+                  a.innerHTML=a.innerHTML+"4"; 
+        }
+        function e(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="5"; 
+            else 
+                  a.innerHTML=a.innerHTML+"5"; 
+        }
+        function f(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="6"; 
+            else 
+                  a.innerHTML=a.innerHTML+"6"; 
+        }
+        function g(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="7"; 
+            else 
+                  a.innerHTML=a.innerHTML+"7"; 
+        }
+        function h(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="8"; 
+            else 
+                  a.innerHTML=a.innerHTML+"8"; 
+        }
+        function i(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="9"; 
+            else 
+                  a.innerHTML=a.innerHTML+"9"; 
+        }
+        function j(){
+            const a = document.getElementById("screen");
+            if (a.innerHTML=="0" )
+                  a.innerHTML="0"; 
+            else 
+                  a.innerHTML=a.innerHTML+"0"; 
+        }
+        
+        
+        function czysc(){
+            const a = document.getElementById("screen");
+                  a.innerHTML="0"; 
+        }
+        function y(){
+            const x = document.getElementById('screen');
+            x.innerHTML="YYYYYYYYYYYY"; 
+        }
+    </script>
+    <!-- You can also require other files to run in this process
+    <script src="./renderer.js"></script>
+     -->
+    
+  </body>
+</html>

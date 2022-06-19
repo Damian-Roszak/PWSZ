@@ -1,0 +1,31 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+.przycisk{
+	width:70px; 
+	height:65px;
+	color:red;
+	font-size: 60px;
+	text-align:center;
+}
+.przyciskP{
+	width:215px; 
+	/*height:62px;*/
+	color:green;
+	font-size: 60px;
+}
+
+.BS{
+	font-size: 30px;
+}
+#screen{
+	width:500px; 
+	min-height:60px;
+	border:solid;
+	color:yellow;
+	background-color: black;
+	font-size: 53px;
+	text-align:right;
+	overflow-wrap: break-word;
+}

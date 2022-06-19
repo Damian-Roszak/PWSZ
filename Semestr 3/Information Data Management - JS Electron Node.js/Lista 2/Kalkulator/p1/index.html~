@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Damian Roszak - ZDINF Lab1 kalkulator</title>
+  </head>
+  <body>
+    <h1>Damian Roszak - kalkulator ZDINF</h1>
+     <div class= "formstyle">  
+ <form name = "form1">  
+ <input class= "textview" name = "textview">  
+ </form>  
+ <center>  
+ <table >  
+ <tr>   
+    <td> <input class = "btn" type = "button" value = "C" onclick = "form1.textview.value = ' ' " > </td>  
+    <td> <input  class = "btn" type = "button" value = "B" onclick = "backspace()" > </td>  
+    <td> <input  class = "btn" type = "button" value = "/" onclick = "wstaw('/')" > </td>  
+    <td> <input class = "btn" type = "button" value = "x" onclick = "wstaw('*')" > </td>  
+    </tr>  
+      
+     <tr>   
+    <td> <input class = "btn" type = "button" value = "7" onclick = "wstaw(7)" > </td>  
+    <td> <input class = "btn" type = "button" value = "8" onclick = "wstaw(8)" > </td>  
+    <td> <input class = "btn" type = "button" value = "9" onclick = "wstaw(9)" > </td>  
+    <td> <input class = "btn" type = "button" value = "-" onclick = "wstaw('-')" > </td>  
+    </tr>  
+      
+     <tr>   
+    <td> <input class = "btn" type = "button" value = "4" onclick = "wstaw(4)" > </td>  
+    <td> <input class = "btn" type = "button" value = "5" onclick = "wstaw(5)" > </td>  
+    <td> <input class = "btn" type = "button" value = "6" onclick = "wstaw(6)" > </td>  
+    <td> <input class = "btn" type = "button" value = "+" onclick = "wstaw('+')" > </td>  
+    </tr>  
+      
+     <tr>   
+    <td> <input class = "btn" type = "button" value = "1" onclick = "wstaw(1)" > </td>  
+    <td> <input class = "btn" type = "button" value = "2" onclick = "wstaw(2)" > </td>  
+    <td> <input class = "btn" type = "button" value = "3" onclick = "wstaw(3)" > </td>  
+    <td> <input class = "btn" type = "button" value = "&radic;" onclick = "p1()" > </td>  
+    </tr>  
+    <tr>  
+    <td colspan = 2> <input class = "btn" style = "width: 106px" type = "button" value = "0" onclick = "wstaw(0)" > </td>  
+    <td> <input class = "btn" type = "button" value = "." onclick = "wstaw('.')"> </td>  
+    <td> <input class = "btn" style = "height: 50px" type = "button" value = "=" onclick = "wynik()"></td>  
+    </tr>  
+    </table>  
+    </center>  
+ </div>  
+    <script>
+    
+    function p1(){
+       document.form1.textview.value = Math.sqrt(document.form1.textview.value);    
+    }
+    function doMath(){
+        var inputNum1=document.form1.input1.value;
+        var result = Math.sqrt(inputNum1);
+        document.form1.answer.value = result;
+    }                                               
+
+function wstaw(num)   
+{  
+    document.form1.textview.value = document.form1.textview.value + num;  
+}  
+  
+function wynik()  
+{  
+    var exp = document.form1.textview.value;  
+    if(exp)  
+    
+    {  
+        document.form1.textview.value = eval(exp);  
+    }  
+    
+}  
+   
+function backspace()  
+{  
+    var exp = document.form1.textview.value;  
+    document.form1.textview.value = exp.substring(0, exp.length - 1); 
+}  
+  
+  
+    </script>
+    
+  </body>
+</html>
