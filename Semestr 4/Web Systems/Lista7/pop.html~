@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<title>video z modalem</title>
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.modalVideo {
+	width: 400px;
+    height: 200px;
+}
+#vid1{
+	margin: auto;
+	width: 400px;
+    height: 200px;
+}
+.myBtn{
+	margin: 2px;
+	float: left;
+    border: 2px solid red;
+    padding: 3px;
+	cursor:pointer;
+}
+#d1{
+	background-color: green;
+}
+#d2{
+	width: 400px;
+    height: 200px;
+	background-color: pink;
+	margin:auto;
+}
+</style>
+</head>
+<body>
+<div id="d1">
+<h2>Animated Modal with Header and Footer</h2>
+<div id="d2">
+<video id="vid1" controls >
+	<source src="https://redirector.googlevideo.com/videoplayback?app=explorer&expire=1480814979&id=7de8e4d9bc7b9ec4&ip=2a04%3A9dc0%3Ac1%3A71%3A%3A2&ipbits=32&itag=18&key=ck2&mm=31&mn=sn-gvopm-vu2e&ms=au&mt=1480800386&mv=u&pl=41&quality=medium&requiressl=yes&signature=23464CC25BF4DDD5D19C46A3B954A489A670199B.A3CD2BDD7D6B4DE5C52365A28717C82CE87EBFCC&source=webdrive&sparams=requiressl%2Cid%2Citag%2Csource%2Cttl%2Cip%2Cipbits%2Cexpire&ttl=transient&type=video%2Fmp4%3B+codecs%3D%22avc1.42001E%2C+mp4a.40.2%22" type="video/mp4">
+</video>
+</div>
+<br />
+<!-- Trigger/Open The Modal -->
+<div class="myBtn">Open Modal</div>
+<div class="myBtn">Open Modal 2</div>
+<div class="myBtn">Open Modal 3</div>
+<div class="myBtn">Open Modal 4</div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <video id="vid" class="modalVideo" controls >
+      	<source src="https://redirector.googlevideo.com/videoplayback?app=explorer&expire=1480812548&id=740f37081656d1db&ip=2a04%3A9dc0%3Ac1%3A71%3A%3A2&ipbits=32&itag=18&key=ck2&mm=31&mn=sn-2gb7sn7z&ms=au&mt=1480798025&mv=m&nh=IgpwcjAxLnByZzAzKgkxMjcuMC4wLjE&pl=41&quality=medium&requiressl=yes&signature=EAF902F938F842657BCDCA81111783C262661CC.9524045EC2097EA6C1CFC4752CFFC7346A953FFE&source=webdrive&sparams=requiressl%2Cid%2Citag%2Csource%2Cttl%2Cip%2Cipbits%2Cexpire&ttl=transient&type=video%2Fmp4%3B+codecs%3D%22avc1.42001E%2C+mp4a.40.2%22" type="video/mp4">
+      </video> 
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">X</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <video id="vid2" class="modalVideo" controls >
+      	<source src="https://redirector.googlevideo.com/videoplayback?app=explorer&expire=1480822093&id=2840ecb7d26510c7&ip=2a04%3A9dc0%3Ac1%3A71%3A%3A2&ipbits=32&itag=18&key=ck2&mm=31&mn=sn-gvopm-vu2e&ms=au&mt=1480807557&mv=m&pl=41&quality=medium&requiressl=yes&signature=2D2B091C8E0E6D49EBE5464384E095AF762A4AC7.636F60D161911F6E7A49B603F2CA2CD1E7810531&source=webdrive&sparams=requiressl%2Cid%2Citag%2Csource%2Cttl%2Cip%2Cipbits%2Cexpire&ttl=transient&type=video%2Fmp4%3B+codecs%3D%22avc1.42001E%2C+mp4a.40.2%22" type="video/mp4">
+      </video> 
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var myVideo1 = document.getElementById("vid");
+var myVideo = document.getElementById("vid1");
+var myVideo2 = document.getElementById("vid2");
+$(document).ready(function(){
+	$(".myBtn").click(function(){
+		myVideo.pause();
+	});
+});
+
+// Get the modal
+var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
+
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("myBtn")[0];
+var btn2 = document.getElementsByClassName("myBtn")[1];
+var btn3 = document.getElementsByClassName("myBtn")[2];
+var btn4 = document.getElementsByClassName("myBtn")[3];
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close")[1];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+	myVideo1.play();
+}
+btn2.onclick = function() {
+    modal2.style.display = "block";
+	myVideo2.play();
+}
+btn3.onclick = function() {
+    modal.style.display = "block";
+}
+btn4.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+
+    
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+	myVideo.play();
+	myVideo1.pause();
+}
+span1.onclick = function() {
+    modal2.style.display = "none";
+	myVideo.play();
+	myVideo2.pause();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+		myVideo.play();
+		myVideo1.pause();
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+		myVideo.play();
+		myVideo2.pause();
+    }
+}
+
+</script>
+
+</body>
+</html>

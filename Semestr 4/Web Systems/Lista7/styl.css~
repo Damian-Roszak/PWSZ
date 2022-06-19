@@ -1,0 +1,295 @@
+*{
+margin: 0; padding: 0;
+}
+
+input{
+
+}
+input.hover{
+
+}
+
+@media screen and (min-width: 118px) {   
+
+.container{
+    background: pink;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(6, 1fr);/*33%, 33%, 33%;*/
+    grid-template-rows: repeat(14, 1fr); /*33%, 33%, 33%;*/
+    grid-template-areas:
+    "pusty1 pusty1 zero zero zero pusty2"
+    "p118 p112 btn1 btn2 btn3 pusty3"
+    "p118 p112 btn4 btn5 btn6 pusty4"
+    "odd p112 btn7 btn8 btn9 pusty5"
+    "odd p112 btn10 btn11 btn12 pusty6"  
+      
+    "czr p212 btn13 btn14 btn15 pusty7"
+    "czr p212 btn16 btn17 btn18 pusty8"
+    "blk p212 btn19 btn20 btn21 pusty9"
+    "blk p212 btn22 btn23 btn24 pusty10"
+    
+    "ev p312 btn25 btn26 btn27 pusty11"
+    "ev p312 btn28 btn29 btn30 pusty12"
+    "p1936 p312 btn31 btn32 btn33 pusty13"
+    "p1936 p312 btn34 btn35 btn36 pusty14"
+    "rog2 rog2 up1 up2 up3 rog3"
+    ;
+  align-content: space-evenly;
+
+}
+
+div {
+  display: block;
+/*  height: 100%;
+  width: 100%;*/
+}
+.grid-item {    
+    font-weight: 100;
+    font-size: 40px;
+    overflow: hidden;
+}
+.txt{
+    text-align: center;
+}
+button{
+    /*width: auto;
+    height: auto;*/
+    font-weight: bold;
+    font-size: 6ex;
+}
+button.btnRed{
+    color: yellow;
+    background-color: red;
+}
+button.btnBlk{
+    color: yellow;
+    background-color: black;
+}
+.pole{
+    color: black;
+    background-color: lightgreen;
+   /* width: auto;
+    height: auto;*/
+    font-weight: bold;
+    font-size: 6ex;
+    border: 1px solid;
+    text-align: center;
+}
+.emp{
+    
+
+}
+
+.rog{
+    background-color: white;
+}
+
+.empty1{
+    grid-area: pusty1;
+}
+.ziro{
+    
+    grid-area: zero;
+}
+.empty2{
+    grid-area: pusty2;
+}
+.pole118{
+    grid-area: p118;
+}
+.pole112{
+    grid-area: p112;
+}
+.empty3{
+    grid-area: pusty3;
+}
+.empty4{
+    grid-area: pusty4;
+}
+.empty5{
+    grid-area: pusty5;
+}
+.empty6{
+    grid-area: pusty6;
+}
+.szansa{
+    grid-area: odd;
+}
+
+
+.czer{
+    color: yellow;
+    background-color: red;
+    grid-area: czr;
+}
+.blak{
+    color: yellow;
+    background-color: black;
+    grid-area: blk;
+}
+.pole212{
+    grid-area: p212;
+}
+.empty7{
+    grid-area: pusty7;
+}
+.empty8{
+    grid-area: pusty8;
+}
+.empty9{
+    grid-area: pusty9;
+}
+.empty10{
+    grid-area: pusty10;
+}
+
+
+.even{
+    grid-area: ev;
+}
+.pole1936{
+    grid-area: p1936;
+}
+.pole312{
+    grid-area: p312;
+}
+.empty11{
+    grid-area: pusty11;
+}
+.empty12{
+    grid-area: pusty12;
+}
+.empty13{
+    grid-area: pusty13;
+}
+.empty14{
+    grid-area: pusty14;
+}
+.empty15{
+    grid-area: rog2;
+}
+.empty19{
+    grid-area: rog3;
+}
+.btnCash{
+    font-size: 4em;
+    width: 45%;
+    height: auto;
+    font-weight: bold;
+    color: black;
+    background-image:url("dol50.jpg");
+    background-size: 100% 100%;
+}
+
+.ruletka-img{
+    width:100%;
+    height: 100%;   
+}
+.ruletka-img img{
+    width: 100%;
+    height: auto;
+}
+#w{
+    width: 10%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    right: 50%;
+}
+
+}
+/* =====================   MODAL MODAL MODAL ================================ */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-20%; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-20%; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+.modal-body img{
+    width: 100%;
+    height: auto;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.modalVideo {
+	width: 400px;
+    height: 200px;
+}
+#vid1{
+	margin: auto;
+	width: auto;
+    height: auto;
+}
+.myBtn{
+	margin: 2px;
+	float: left;
+    border: 2px solid red;
+    padding: 3px;
+	cursor:pointer;
+}
+/* ======================= MODAL MODAL MODAL MODAL MODAL MODAL ==============================*/

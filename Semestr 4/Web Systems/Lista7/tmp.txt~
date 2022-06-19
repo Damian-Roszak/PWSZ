@@ -1,0 +1,53 @@
+
+
+
+    "+++ === btn13 btn14 btn15 row4"
+    "--- === btn16 btn17 btn18 row5"
+    "+++ --- btn19 btn20 btn21 row6"
+    "=== +++ btn22 btn23 btn24 row7"
+    "--- === btn25 btn26 btn27 row8"
+    "+++ --- btn28 btn29 btn30 row9"
+    "=== --- btn31 btn32 btn33 row10"
+    "--- +++ btn34 btn35 btn36 row11"
+
+
+<button type="button" class="btnRed btn1">1</button> 
+            <button type="button" class="btnBlk btn2">2</button>
+            <button type="button" class="btnRed btn3">3</button>
+            <button type="button" class="btnBlk btn4">4</button>
+            <button type="button" class="btnRed btn5">5</button>
+            <button type="button" class="btnBlk btn6">6</button>
+            <button type="button" class="btnRed btn7">7</button>
+            <button type="button" class="btnBlk btn8">8</button>
+            <button type="button" class="btnRed btn9">9</button>
+            <button type="button" class="btnBlk btn10 ">10</button>
+
+            <button type="button" class="btnRed btn11 ">11</button>
+            <button type="button" class="btnBlk btn12">12</button>
+            <button type="button" class="btnRed btn13">13</button>
+            <button type="button" class="btnBlk btn14">14</button>
+            <button type="button" class="btnRed btn15">15</button>
+            <button type="button" class="btnBlk btn16">16</button>
+            <button type="button" class="btnRed btn17">17</button>
+            <button type="button" class="btnBlk btn18">18</button>
+            <button type="button" class="btnRed btn19">19</button>
+            <button type="button" class="btnBlk btn20">20</button>
+
+            <button type="button" class="btnRed btn21">21</button>
+            <button type="button" class="btnBlk btn22">22</button>
+            <button type="button" class="btnRed btn23">23</button>
+            <button type="button" class="btnBlk btn24">24</button>
+            <button type="button" class="btnRed btn25">25</button>
+            <button type="button" class="btnBlk btn26">26</button>
+            <button type="button" class="btnRed btn27">27</button>
+            <button type="button" class="btnBlk btn28">28</button>
+            <button type="button" class="btnRed btn29">29</button>
+            <button type="button" class="btnBlk btn30">30</button>
+
+
+            <button type="button" class="btnRed btn31">31</button>
+            <button type="button" class="btnBlk btn32">32</button>
+            <button type="button" class="btnRed btn33">33</button>
+            <button type="button" class="btnBlk btn34">34</button>
+            <button type="button" class="btnRed btn35">35</button>
+            <button type="button" class="btnBlk btn36">36</button>

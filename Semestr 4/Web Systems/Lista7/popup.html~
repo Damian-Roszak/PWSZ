@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 6</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <link rel="stylesheet" type="text/css" href="styl.css">
+    <!--      <link rel="stylesheet" type="text/js" href="skrypt.js">   -->
+
+
+</head>
+<body>
+
+<div class="container">
+
+            <button type="button" class="btnRed btn1" value="1" onclick="f2(this)">1</button> 
+            <button type="button" class="btnBlk btn2" value="2" onclick="f2(this)">2</button>
+            
+
+            <button type="button" class="btnRed btn5" value="5" onclick="f(this)">5</button>
+
+            <button type="button" class="btnBlk btn10 " value="10" onclick="f2(this)">10</button>
+
+            <button type="button" class="btnBlk btn15" value="15" onclick="f2(this)">15</button>
+       
+            <button type="button" class="btnBlk btn20" value="20" onclick="f2(this)">20</button>
+
+            <button type="button" class="btnRed btn25" value="25" onclick="f2(this)">25</button>
+
+            <button type="button" class="btnRed btn30" value="30" onclick="f2(this)">30</button>
+            <button type="button" class="btnBlk btn35" value="35" onclick="f2(this)">35</button>
+
+    
+    
+
+</div>
+
+
+
+<script>
+ 
+ 
+ 
+ 
+ 
+
+</script>
+      <script type="text/javascript" src="skrypt.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 6</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <link rel="stylesheet" type="text/css" href="styl.css">
+    <!--      <link rel="stylesheet" type="text/js" href="skrypt.js">   -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!---<div id="lol"> </div>-->
+<div class="container">
+
+    <div class="rog pole emp emp empty1"> </div>
+     <div class=" ziro pole"> 0</div>  
+        <div class=" rog pole emp empty2"> </div>
+
+
+    <button type="button" class=" pole pole118">1-18</button>         
+    <div class=" pole pole112">1st 12</div> 
+            <button type="button" class="btnRed btn1" value="1" onclick="f(this)">1 </button>   
+            <button type="button" class="btnBlk btn2" value="2" onclick="f(this)">2</button>
+            <button type="button" class="btnRed btn3" value="3" onclick="f(this)">3</button>
+   <div class=" pole emp empty3"> ←</div>
+            
+            <button type="button" class="btnBlk btn4" value="4" onclick="f(this)">4</button>
+            <button type="button" class="btnRed btn5" value="5" onclick="f(this)">5</button>
+            <button type="button" class="btnBlk btn6" value="6" onclick="f(this)">6</button>
+   <div class=" pole emp empty4"> ←</div>
+            <button type="button" class="btnRed btn7" value="7" onclick="f(this)">7</button>
+            <button type="button" class="btnBlk btn8" value="8" onclick="f(this)">8</button>
+            <button type="button" class="btnRed btn9" value="9" onclick="f(this)">9</button>
+  <div class=" pole emp empty5"> ←</div>
+            <button type="button" class="btnBlk btn10 " value="10" onclick="f(this)">10</button>
+            <button type="button" class="btnBlk btn11 " value="11" onclick="f(this)">11</button>
+            <button type="button" class="btnRed btn12" value="12" onclick="f(this)">12</button>
+  <div class=" pole emp empty6"> ←</div>
+  <div class="szansa pole "> odd</div>
+
+  
+    <div class=" pole czer">red</div>         
+    <div class=" pole pole212">2nd 12</div>      
+            <button type="button" class="btnBlk btn13" value="13" onclick="f(this)">13</button>
+            <button type="button" class="btnRed btn14" value="14" onclick="f(this)">14</button>
+            <button type="button" class="btnBlk btn15" value="15" onclick="f(this)">15</button>
+       <div class=" pole emp empty7"> ←</div>
+       
+            <button type="button" class="btnRed btn16" value="16" onclick="f(this)">16</button>
+            <button type="button" class="btnBlk btn17" value="17" onclick="f(this)">17</button>
+            <button type="button" class="btnRed btn18" value="18" onclick="f(this)">18</button>
+       <div class=" pole emp empty8"> ←</div>            
+
+            <button type="button" class="btnRed btn19" value="19" onclick="f(this)">19</button>
+            <button type="button" class="btnBlk btn20" value="20" onclick="f(this)">20</button>
+            <button type="button" class="btnRed btn21" value="21" onclick="f(this)">21</button>
+       <div class=" pole emp empty9"> ←</div>
+            <button type="button" class="btnBlk btn22" value="22" onclick="f(this)">22</button>
+            <button type="button" class="btnRed btn23" value="23" onclick="f(this)">23</button>
+            <button type="button" class="btnBlk btn24" value="24" onclick="f(this)">24</button>
+       <div class=" pole emp empty10"> ←</div>
+    <div class=" pole blak">blk</div>            
+    
+    
+    <div class=" pole even">even</div>         
+    <div class=" pole pole1936">19 - 36</div> 
+            <button type="button" class="btnRed btn25" value="25" onclick="f(this)">25</button>
+            <button type="button" class="btnBlk btn26" value="26" onclick="f(this)">26</button>
+            <button type="button" class="btnRed btn27" value="27" onclick="f(this)">27</button>
+       <div class=" pole emp empty11"> ←</div>
+            <button type="button" class="btnBlk btn28" value="28" onclick="f(this)">28</button>
+            <button type="button" class="btnBlk btn29" value="29" onclick="f(this)">29</button>
+            <button type="button" class="btnRed btn30" value="30" onclick="f(this)">30</button>
+       <div class=" pole emp empty12"> ←</div>
+
+            <button type="button" class="btnBlk btn31" value="31" onclick="f(this)">31</button>
+            <button type="button" class="btnRed btn32" value="32" onclick="f(this)">32</button>
+            <button type="button" class="btnBlk btn33" value="33" onclick="f(this)">33</button>
+       <div class=" pole emp empty13"> ←</div>
+            <button type="button" class="btnRed btn34" value="34" onclick="f(this)">34</button>
+            <button type="button" class="btnBlk btn35" value="35" onclick="f(this)">35</button>
+            <button type="button" class="btnRed btn36" value="36" onclick="f(this)">36</button>     
+       <div class=" pole emp empty14"> ←</div>
+    <div class=" pole pole312">3rd 12</div> 
+    
+    <div class="rog pole emp empty15"> </div>
+     <div class=" pole up1"> &#8593;</div>
+     <div class=" pole up2"> &#8593;</div>
+     <div class=" pole up3"> &#8593;</div>
+        <div class=" rog pole emp empty19"> </div>
+
+</div>
+
+
+
+<!-- <div id="kasa"> 
+<input type="Number" onclick="f2()"></input> --->
+
+<h1 id="cash">Za ile chcesz zagrać?:</h1>
+            <button type="button" class="btnCash btn1" value="1" onclick="f2(this)">1</button> 
+            <button type="button" class="btnCash btn2" value="2" onclick="f2(this)">2</button>            
+
+            <button type="button" class="btnCash btn5" value="5" onclick="f2(this)">5</button>
+            <button type="button" class="btnCash btn10 " value="10" onclick="f2(this)">10</button>
+
+            <button type="button" class="btnCash btn15" value="15" onclick="f2(this)">15</button>       
+            <button type="button" class="btnCash btn20" value="20" onclick="f2(this)">20</button>
+            <button type="button" class="btnCash btn25" value="25" onclick="f2(this)">25</button>
+            
+            <button type="button" class="btnCash btn30" value="30" onclick="f2(this)">30</button>
+            <button type="button" class="btnCash btn35" value="35" onclick="f2(this)">35</button>   
+
+    </div>
+
+
+
+    <div id="obrazek" class="ruletka-img">
+        <img src="ruletka.jpg" >
+    </div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Jakiś ttekst Modal Body</p>
+      
+        <img src="ruletka.jpg" >
+      <p>Coś tam tam coś</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="skrypt.js"></script>
+
+<script>
+ 
+var myVideo1 = document.getElementById("obrazek");
+//var myVideo = document.getElementById("vid1");
+//var myVideo2 = document.getElementById("vid2");
+$(document).ready(function(){
+	$(".btnCash").click(function(){
+		//myVideo.pause();
+	});
+});
+
+// Get the modal
+var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
+
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("btnCash")[0];
+
+var batn2 = document.getElementsByClassName("btnCash")[1];
+var batn3 = document.getElementsByClassName("btnCash")[2];
+var batn4 = document.getElementsByClassName("btnCash")[3];
+
+var batn5 = document.getElementsByClassName("btnCash")[4];
+var batn6 = document.getElementsByClassName("btnCash")[5];
+var batn7 = document.getElementsByClassName("btnCash")[6];
+
+var batn8 = document.getElementsByClassName("btnCash")[7];
+var batn9 = document.getElementsByClassName("btnCash")[8];
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close")[1];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+	//myVideo1.style.display = "block";
+}
+
+batn2.onclick = function() {
+    f2(this);
+    modal.style.display = "block";
+    
+}
+batn3.onclick = function() {
+    modal.style.display = "block";
+}
+batn4.onclick = function() {
+    modal.style.display = "block";
+}
+
+batn5.onclick = function() {
+    modal.style.display = "block";
+}
+batn6.onclick = function() {
+    modal.style.display = "block";
+}
+batn7.onclick = function() {
+    modal.style.display = "block";
+}
+batn8.onclick = function() {
+    modal.style.display = "block";
+}
+batn9.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+
+    
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}/*
+span1.onclick = function() {
+    modal2.style.display = "none";
+	myVideo.play();
+	myVideo2.pause();
+}*/
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+ 
+ 
+ 
+ 
+
+</script>
+      
+</div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 6</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+       <link rel="stylesheet" type="text/css" href="styl.css">
+    <!--      <link rel="stylesheet" type="text/js" href="skrypt.js">   -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!---<div id="lol"> </div>-->
+<div id="begin" class="container">
+
+    <div class="rog pole emp emp empty1"> </div>
+     <div class=" ziro pole" id="bn0" value="0"> 0</div>  
+        <div class=" rog pole emp empty2"> </div>
+
+
+    <button type="button" class="pole118 pole " onclick="f(this)" value="nr 1-18">1-18</button>         
+    <button class="pole112 pole " onclick="f(this)" value="1st 12">1st 12</button> 
+            <button type="button" id="bn1" class="btnRed btn1" value="1" onclick="f(this)">1 </button>   
+            <button type="button" id="bn2" class="btnBlk btn2" value="2" onclick="f(this)">2</button>
+            <button type="button" id="bn3" class="btnRed btn3" value="3" onclick="f(this)">3</button>
+   <button class="strzałka3 pole emp empty3" onclick="f(this)" value="nr 1-3"> ←</button>
+            
+            <button type="button" id="bn4" class="btnBlk btn4" value="4" onclick="f(this)">4</button>
+            <button type="button" id="bn5" class="btnRed btn5" value="5" onclick="f(this)">5</button>
+            <button type="button" id="bn6" class="btnBlk btn6" value="6" onclick="f(this)">6</button>
+   <button class="strzałka3 pole emp empty4" onclick="f(this)" value="nr 4-6"> ←</button>
+            <button type="button" id="bn7" class="btnRed btn7" value="7" onclick="f(this)">7</button>
+            <button type="button" id="bn8" class="btnBlk btn8" value="8" onclick="f(this)">8</button>
+            <button type="button" id="bn9" class="btnRed btn9" value="9" onclick="f(this)">9</button>
+  <button class="strzałka3 pole emp empty5" onclick="f(this)" value="nr 7-9"> ←</button>
+            <button type="button" id="bn10" class="btnBlk btn10 " value="10" onclick="f(this)">10</button>
+            <button type="button" id="bn11" class="btnBlk btn11 " value="11" onclick="f(this)">11</button>
+            <button type="button" id="bn12" class="btnRed btn12" value="12" onclick="f(this)">12</button>
+  <button class="strzałka3 pole emp empty6" onclick="f(this)" value="nr 10-12"> ←</button>
+  <button class="szansa pole " onclick="f(this)" value="odd"> odd</button>
+
+  
+    <button class="czer pole " onclick="f(this)" value="red">red</button>         
+    <button class="pole212 pole " onclick="f(this)" value="2nd 12">2nd 12</button>      
+            <button type="button" id="bn13" class="btnBlk btn13" value="13" onclick="f(this)">13</button>
+            <button type="button" id="bn14" class="btnRed btn14" value="14" onclick="f(this)">14</button>
+            <button type="button" id="bn15" class="btnBlk btn15" value="15" onclick="f(this)">15</button>
+       <button class="strzałka3 pole emp empty7" onclick="f(this)" value="nr 13-15"> ←</button>
+       
+            <button type="button" id="bn16" class="btnRed btn16" value="16" onclick="f(this)">16</button>
+            <button type="button" id="bn17" class="btnBlk btn17" value="17" onclick="f(this)">17</button>
+            <button type="button" id="bn18" class="btnRed btn18" value="18" onclick="f(this)">18</button>
+       <button class="strzałka3 pole emp empty8" onclick="f(this)" value="nr 16-18"> ←</button>            
+
+            <button type="button" id="bn19" class="btnRed btn19" value="19" onclick="f(this)">19</button>
+            <button type="button" id="bn20" class="btnBlk btn20" value="20" onclick="f(this)">20</button>
+            <button type="button" id="bn21" class="btnRed btn21" value="21" onclick="f(this)">21</button>
+       <button class="strzałka3 pole emp empty9" onclick="f(this)" value="nr 19-21"> ←</button>
+            <button type="button" id="bn22" class="btnBlk btn22" value="22" onclick="f(this)">22</button>
+            <button type="button" id="bn23" class="btnRed btn23" value="23" onclick="f(this)">23</button>
+            <button type="button" id="bn24" class="btnBlk btn24" value="24" onclick="f(this)">24</button>
+       <button class="strzałka3 pole emp empty10" onclick="f(this)" value="nr 22-24"> ←</button>
+    <button class="blak pole " onclick="f(this)" value="czarne">blk</button>            
+    
+    
+    <button class="even pole " onclick="f(this)" value="parzyste">even</button>         
+    <button class="pole1936 pole " onclick="f(this)" value="nr 19-36">19 - 36</button> 
+            <button type="button" id="bn25" class="btnRed btn25" value="25" onclick="f(this)">25</button>
+            <button type="button" id="bn26" class="btnBlk btn26" value="26" onclick="f(this)">26</button>
+            <button type="button" id="bn27" class="btnRed btn27" value="27" onclick="f(this)">27</button>
+       <button class="strzałka3 pole emp empty11" onclick="f(this)" value="nr 25-27"> ←</button>
+            <button type="button" id="bn28" class="btnBlk btn28" value="28" onclick="f(this)">28</button>
+            <button type="button" id="bn29" class="btnBlk btn29" value="29" onclick="f(this)">29</button>
+            <button type="button" id="bn30" class="btnRed btn30" value="30" onclick="f(this)">30</button>
+       <button class="strzałka3 pole emp empty12" onclick="f(this)" value="nr 28-30"> ←</button>
+
+            <button type="button" id="bn31" class="btnBlk btn31" value="31" onclick="f(this)">31</button>
+            <button type="button" id="bn32" class="btnRed btn32" value="32" onclick="f(this)">32</button>
+            <button type="button" id="bn33" class="btnBlk btn33" value="33" onclick="f(this)">33</button>
+       <button class="strzałka3 pole emp empty13" onclick="f(this)" value="nr 31-33"> ←</button>
+            <button type="button" id="bn34" class="btnRed btn34" value="34" onclick="f(this)">34</button>
+            <button type="button" id="bn35" class="btnBlk btn35" value="35" onclick="f(this)">35</button>
+            <button type="button" id="bn36" class="btnRed btn36" value="36" onclick="f(this)">36</button>     
+       <button class="strzałka3 pole emp empty14" onclick="f(this)" value="nr 34-36"> ←</button>
+    <button class="pole312 pole " onclick="f(this)" value="3rd 12">3rd 12</button> 
+    
+    <div class="rog pole emp empty15"> </div>
+     <button class="strzałka12 pole up1" onclick="f(this)" value="kolumna 1"> &#8593;</button>
+     <button class="strzałka12 pole up2" onclick="f(this)" value="kolumna 2"> &#8593;</button>
+     <button class="strzałka12 pole up3" onclick="f(this)" value="kolumna 3"> &#8593;</button>
+        <div class=" rog pole emp empty19"> </div>
+
+</div>
+
+
+
+<!-- <div id="kasa"> 
+<input type="Number" onclick="f2()"></input> --->
+
+<h1 id="cash">Za ile chcesz zagrać?:</h1>
+            <button type="button" class="btnCash btn1" value="1" onclick="f2(this)">1</button> 
+            <button type="button" class="btnCash btn2" value="2" onclick="f2(this)">2</button>            
+
+            <button type="button" class="btnCash btn5" value="5" onclick="f2(this)">5</button>
+            <button type="button" class="btnCash btn10 " value="10" onclick="f2(this)">10</button>
+
+            <button type="button" class="btnCash btn15" value="15" onclick="f2(this)">15</button>       
+            <button type="button" class="btnCash btn20" value="20" onclick="f2(this)">20</button>
+            <button type="button" class="btnCash btn25" value="25" onclick="f2(this)">25</button>
+            
+            <button type="button" class="btnCash btn30" value="30" onclick="f2(this)">30</button>
+            <button type="button" class="btnCash btn35" value="35" onclick="f2(this)">35</button> 
+            <button type="button" class="btnCash btn50" value="50" onclick="f2(this)">50</button>   
+
+    </div>
+
+
+
+    <div id="obrazek" class="ruletka-img">
+        <img src="ruletka.jpg" >
+    </div>
+<!--- modal 1 -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content id="mb" -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div  class="modal-body">
+      <p>Jakiś ttekst Modal Body</p>
+      
+        <img id="w" src="wsk.png" class="ruletka-img">
+        <img id="obr" src="koło.png" class="ruletka-img">
+      <p>Coś tam tam coś</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+<!-- koniec modal 1 -->
+
+<!--- modal 2 -->
+<div id="myModal2" class="modal">
+
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p id="modalBody"></p>
+      
+       
+      <p>Coś tam tam coś</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+<!-- koniec modal 2 -->
+
+
+<script type="text/javascript" src="skrypt.js"></script> 
+
+<script>
+/*
+window.onload=on_Load;
+function on_Load() {
+    var div = $('.ruletka-img');
+    var width = 23; //div.width();
+    
+    div.css.height += 'width' + width;
+};*/
+
+//var myVideo1 = document.getElementById("obrazek");
+//var myVideo = document.getElementById("vid1");
+//var myVideo2 = document.getElementById("vid2");
+$(document).ready(function(){
+	$(".btnCash").click(function(){
+		//myVideo.pause();
+	});
+});
+
+//  modal
+var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
+
+
+// button - modal
+var btn = document.getElementsByClassName("btnCash")[0];
+
+var batn2 = document.getElementsByClassName("btnCash")[1];
+var batn3 = document.getElementsByClassName("btnCash")[2];
+var batn4 = document.getElementsByClassName("btnCash")[3];
+
+var batn5 = document.getElementsByClassName("btnCash")[4];
+var batn6 = document.getElementsByClassName("btnCash")[5];
+var batn7 = document.getElementsByClassName("btnCash")[6];
+
+var batn8 = document.getElementsByClassName("btnCash")[7];
+var batn9 = document.getElementsByClassName("btnCash")[8];
+var batn10 = document.getElementsByClassName("btnCash")[9];
+
+// <span> x
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close")[1];
+
+// klik -> modal 
+let outTime = 10000;
+
+btn.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+	setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+
+batn2.onclick = function() {
+    f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+batn3.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+batn4.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+
+batn5.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+batn6.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+batn7.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+batn8.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+batn9.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+batn10.onclick = function() {
+ f2(this);
+    modal.style.display = "block";
+    setTimeout(()=>{
+    	modal.style.display = "none";
+    	modal2.style.display = "block";
+    	
+	}, outTime)
+}
+
+
+
+    
+
+span.onclick = function() {
+    document.getElementById('begin').scrollIntoView(true);
+    modal.style.display = "none";
+}
+span1.onclick = function() {
+    document.getElementById('begin').scrollIntoView(true);
+    modal2.style.display = "none";	
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {    
+        document.getElementById('begin').scrollIntoView(true);
+        modal.style.display = "none";
+    }
+    if (event.target == modal2) {
+        document.getElementById('begin').scrollIntoView(true);
+        modal2.style.display = "none";
+    }
+    
+}
+ 
+ 
+
+ 
+
+</script>
+      
+</div>
+</body>
+</html>
