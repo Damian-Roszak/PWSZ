@@ -1,0 +1,2 @@
+1; Czy niebo jest niebieskie?; Tak; Nie; Być może; Wszystkie powyższe; 1
+2; Ile waży kilogram cukru?; Tonę; Nie wiem; kilogram; Wszystkie powyższe; 3
