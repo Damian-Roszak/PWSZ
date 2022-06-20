@@ -1,0 +1,15 @@
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\bin\Debug\net6.0\Zad4.exe
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\bin\Debug\net6.0\Zad4.deps.json
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\bin\Debug\net6.0\Zad4.runtimeconfig.json
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\bin\Debug\net6.0\Zad4.dll
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\bin\Debug\net6.0\Zad4.pdb
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.csproj.AssemblyReference.cache
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.AssemblyInfoInputs.cache
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.AssemblyInfo.cs
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.dll
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\refint\Zad4.dll
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.pdb
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\Zad4.genruntimeconfig.cache
+C:\Users\Damian\Documents\NET\Lista1\Zad4\Zad4\obj\Debug\net6.0\ref\Zad4.dll
