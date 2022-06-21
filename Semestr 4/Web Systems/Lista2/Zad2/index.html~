@@ -1,0 +1,64 @@
+<html>
+    <head>
+    <title>PSW - Zad2</title>
+    </head>
+    
+    <body>
+    <form action="/action_page.php">
+    <table>
+        <tr>
+            <td><label for="komputerowych">komputerowych: </label></td><td> <input type="text" id="komputerowych" value="NET" ></td>
+        </tr>
+        <tr>
+            <td>przy:</td>
+            <td><select multiple size="2"><option>organizowanych</option><option>XX</option><option>aa</option></select>
+        </tr>
+        <tr>
+            <td>informatycznej:</td><td><input type="text" value="Rozwinięcie"></td>
+        </tr>
+        <tr>
+            <td>technologii:</td><td><label for="systemowego1">systemowego</label><input type="checkbox" id="systemowego1" name="systemowego" value="systemowego" checked>
+  <label for="gospodarczych">gospodarczych</label><input type="checkbox" id="gospodarczych" name="gospodarczych" value="gospodarczych" checked>
+  <label for="kształcenia">kształcenia</label><input type="checkbox" id="kształcenia" name="kształcenia" value="kształcenia">
+  </td>
+        </tr>
+        <tr>
+            <td>stanowisku:</td>
+            <td>
+                <button type="button" >również</button><button type="button" >Automatyki</button><button type="button" >małej</button>
+            </td>
+        </tr>
+        <tr>
+            <td>komputerowych:</td>
+            <td><!---   background-color="#ffffff" --->
+                <select >
+                    <option style="background-color: white;">jako</option>
+                    <option>XalskdX</option>
+                    <option>aa</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>projektów:</td>
+            <td><select style="background-color: white;">
+                    <option value="najnowszych">najnowszych</option>
+                    <option value="Firefox">FirefoxChrome</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>także:</td>
+            <td>
+                <textarea id="w3review" name="w3review" rows="2" cols="19">specjalności własnym powoduje</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>inżyniera:</td><td><label for="systemowego">systemowego</label><input type="radio" id="systemowego" name="systemowego" value="systemowego"></td>
+        </tr>
+    
+    
+    
+    </table>
+    </form>
+    </body>
+</html>

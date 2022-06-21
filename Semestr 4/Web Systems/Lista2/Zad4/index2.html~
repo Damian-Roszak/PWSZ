@@ -1,0 +1,42 @@
+<html lang="pl-PL">
+<head>
+   <meta charset="UTF-8">
+   <title>PSW Lista 2 Zadanie 4</title>
+    <link rel='stylesheet' href='styl.css'>
+</head>
+
+<body>
+<script>
+class PotegaLol extends HTMLElement{
+    constructor(){
+        super();
+        this.addEventListener('click', this.update);       
+    }
+    
+    update(){
+        this.innerHTML = this.getAttribute('pt')*this.getAttribute('pt');
+        this.setAttribute('pt', this.getAttribute('pt')*2);
+        this.innerHTML += this.getAttribute('pt');
+    }
+    
+    attributeChangedCallback(name, oldVal, newVal){ 
+    }
+    
+    static get observedAttributes(){
+        return ['pt'];
+    }
+}
+
+customElements.define('potega-lol', PotegaLol);
+
+customElements.whenDefined('potega-lol').then(() => {
+  console.log('potega-lol zdefiniowany');
+});
+</script>
+<br>
+ <font size="100px">
+Potęga: <potega-lol pt="1">start</potega-lol>
+</font>
+</body>
+</html>
+

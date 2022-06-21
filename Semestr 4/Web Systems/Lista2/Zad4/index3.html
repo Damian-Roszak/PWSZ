@@ -1,0 +1,50 @@
+<html lang="pl-PL">
+<head>
+   <meta charset="UTF-8">
+   <title>PSW Lista 2 Zadanie 4</title>
+    <link rel='stylesheet' href='styl.css'>
+</head>
+
+<body>
+<script>
+class DataLOL extends HTMLElement{
+    constructor(){
+        super();
+        //this.addEventListener('click', this.update);       
+    }
+    
+    update(){
+        
+    }
+    
+    attributeChangedCallback(name, oldVal, newVal){ 
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = '0' + dd;
+        if (mm < 10) mm = '0' + mm;
+
+        const dzis = dd + '-' + mm + '-' + yyyy;
+        this.innerHTML = dzis;
+    }
+    
+    static get observedAttributes(){
+        return ['dt'];
+    }
+}
+
+customElements.define('data-lol', DataLOL);
+
+customElements.whenDefined('data-lol').then(() => {
+  console.log('data-lol zdefiniowany');
+});
+</script>
+<br>
+ <font size="100px">
+Dzisiejsza data: <data-lol dt="dziś"></data-lol>
+</font>
+</body>
+</html>
+

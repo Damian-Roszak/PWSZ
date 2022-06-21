@@ -1,0 +1,42 @@
+<html lang="pl-PL">
+<head>
+   <meta charset="UTF-8">
+   <title>PSW Lista 2 Zadanie 4</title>
+    <link rel='stylesheet' href='styl.css'>
+</head>
+
+<body>
+<script>
+class ClickCounter extends HTMLElement{
+    constructor(){
+        super();
+        this.clicksNo = 1;
+        this.addEventListener('click', this.update);
+        
+    }
+    update(){
+    this.clicksNo++;
+        if (this.clicksNo == this.getAttribute('bg')){
+            this.clicksNo = 1;     
+            this.innerHTML = this.clicksNo;
+        }
+        else
+            this.innerHTML = this.clicksNo;
+    }
+    attributeChangedCallback(name, oldVal, newVal){   
+        if(name === 'bg'){
+            this.style.backgroundColor = 'lightgreen';
+        }  
+    }
+    static get observedAttributes(){
+        return ['bg'];
+    }
+}
+customElements.define('click-counter', ClickCounter);
+</script>
+ClickCounter:   <click-counter bg="4" width="100px" height="100px">1</click-counter>
+
+
+</body>
+</html>
+
