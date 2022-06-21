@@ -1,0 +1,55 @@
+*{
+margin: 0; padding: 0;
+}
+.container{
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+.grid-item {    
+    height: 300px;
+    width: 200px;
+    font-size: 50px;
+    font-weight: 100;
+}
+.txt{
+    text-align:center;
+}
+.element1{
+    background: rgb(77,183,230); 
+    width: 100%; 
+    height: 100px;
+}
+.element2{
+    background: rgb(109,250,87);       
+    flex-basis: 50%;       
+}
+.element3{
+    background: red;         
+    flex-basis: 50%;     
+}
+.element4{
+    background: yellow;      
+    flex-basis: 50%;        
+}
+.element5{
+    background: yellow;         
+    flex-basis: 50%;     
+}
+.element6{
+    background: rgb(109,150,187);      
+    flex-basis: 50%;     
+}
+.element7{
+    background: lightgreen;      
+    flex-basis: 50%;   
+}
+.element8{
+    background: rgb(87,187,5);  
+    flex-basis: 100%;
+    height: auto;
+}
+
+

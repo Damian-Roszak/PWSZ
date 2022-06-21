@@ -1,0 +1,113 @@
+*{
+margin: 0; padding: 0;
+}
+.container{
+    background: black;
+    display: grid;
+    width: 1000px;
+    height: 2000px;
+    grid-template-columns: repeat(4, 1fr);/*33%, 33%, 33%;*/
+    grid-template-rows: repeat(8, 1fr); /*33%, 33%, 33%;*/
+    grid-template-areas:
+    "hed hed hed hed"
+    "fot1 fot1 fot2 fot3"
+    "fot1 fot1 fot4 fot5"
+    "fot6 fot7 fot8 fot8"
+    "fot9 fot0 fot8 fot8"
+    "fot10 fot10 fot11 fot12"
+    "fot10 fot10 fot13 fot14"
+    "foot foot foot foot"
+    ;
+  align-content: space-evenly;
+
+}
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.grid-item {    
+    font-weight: 100;
+    font-size: 40px;
+    overflow: hidden;
+}
+.txt{
+    text-align: center;
+}
+.element1{
+    background: rgb(77,183,230); 
+    grid-area: hed;
+}
+
+.element2{
+    background: rgb(109,250,87);          
+    grid-area: fot1;
+
+}
+.element3{
+    background: red;         
+    grid-area: fot2;
+}
+.element4{
+    background: yellow;     
+    grid-area: fot3; 
+}
+.element5{
+    background: yellow;   
+    grid-area: fot4;
+}
+.element6{
+    background: rgb(109,150,187);   
+    grid-area: fot5;
+}
+.element7{
+    background: lightgreen;     
+    grid-area: fot6;
+}
+
+.element8{
+    background: lightgreen;     
+    grid-area: fot7;
+}
+
+.element9{
+    background: green;     
+    grid-area: fot8;
+}
+
+.element10{
+    background: #222333;     
+    grid-area: fot9;
+}
+
+.element11{
+    background: purple;     
+    grid-area: fot0;
+}
+
+.element12{
+    background: blue;     
+    grid-area: fot10;
+}
+
+.element13{
+    background: yellow;     
+    grid-area: fot11;
+}
+.element14{
+    background: pink;     
+    grid-area: fot12;
+}
+.element15{
+    background: lightblue;     
+    grid-area: fot13;
+}
+.element16{
+    background: lightgreen;     
+    grid-area: fot14;
+}
+.footer{
+    background: rgb(87,187,5);  
+    grid-area: foot;
+}
+

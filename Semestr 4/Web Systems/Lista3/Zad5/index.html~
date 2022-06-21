@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 3 - zad 5</title>
+   <link href="styl.css" rel="stylesheet">
+</head> 
+
+<body>
+    <div class="container">
+        <div class="grid-item element1 txt">
+            <s OWCZAREK NIEMIECKI <br>- Najlepszy przyjaciel człowieka -
+        </div>
+        <div class="grid-item element2">        
+            <img src="1.jpg" > </img>
+        </div>
+        
+        <div class="grid-item element3 txt">
+            <img src="2.jpg"></img>
+        </div>
+        
+        <div class="grid-item element4 txt">
+            <img src="3.jpg"></img>
+        </div>
+        <div class="grid-item element5">
+               <img src="4.jpg"></img>
+        </div>
+        <div class="grid-item element6">
+            <img src="5.jpg"> </img>
+        </div>
+        <div class="grid-item element7 txt">
+            <img src="6.jpg"></img>
+        </div>
+        <div class="grid-item element8 txt">
+            <img src="7.jpg"></img>
+        </div>
+        <div class="grid-item element9 txt">
+            <img src="8.jpg"></img>
+        </div>
+        <div class="grid-item element10 txt">
+            <img src="9.jpg"></img>
+        </div>
+        <div class="grid-item element11 txt">
+            <img src="0.jpg"></img>
+        </div>
+        <div class="grid-item element12 txt">
+            <img src="0.jpg"></img>
+        </div>
+        <div class="grid-item element13 txt">
+            <img src="1.jpg"></img>
+        </div>
+        <div class="grid-item element14 txt">
+            <img src="2.jpg"></img>
+        </div>
+        <div class="grid-item element15 txt">
+            <img src="3.jpg"></img>
+        </div>
+        <div class="grid-item element16 txt">
+            <img src="4.jpg"></img>
+        </div>
+      
+        <div class="grid-item footer txt">
+        KONTAKT: CAŁĄ DOBĘ tel:777 888 999 adres: Rynek 123 Głuchołazy
+        </div>
+    </div>
+</body>

@@ -1,0 +1,35 @@
+*{
+margin: 0; padding: 0;
+}
+.container{
+    background: black;
+    display: grid;
+    width: clamp(300px, 90%, 800px);
+    grid-template-columns: 1fr 1fr 2fr;
+    gap:20px;
+}
+
+.grid-item {    
+    height: 300px;
+}
+.element1{
+    background: yellow;    
+}
+.element2{
+    background: rgb(109,250,87);    
+}
+.element3{
+    background: red;    
+}
+.element4{
+    background: rgb(77,183,230);    
+}
+.element5{
+    background: yellow;    
+}
+
+.element6{
+    background: rgb(109,250,87);    
+}
+
+

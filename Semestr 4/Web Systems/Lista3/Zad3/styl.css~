@@ -1,0 +1,47 @@
+.container{
+    width: 100%; height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas:
+    "nag nag nag"
+    "left main main"
+    "foot foot foot";
+    background-color: black;
+}
+.nag{
+    background-color: lightgreen;
+    grid-area: nag;
+    font-weight: 800;
+    font-size: 64px;
+    text-align: center;
+}
+.left{
+    background-color: yellow;
+    grid-area: left;
+    font-weight: 800;
+    font-size: 34px;
+    text-align: center;
+}
+.left p{
+    margin-top: 30px;
+}
+.main{
+    background-color: white;
+    grid-area: main;
+    overflow:scroll;
+}
+.main p{
+    margin: 3px;
+    padding: 5px;
+}
+
+.foot{
+    background-color: aqua;
+    grid-area: foot;
+    
+    font-weight: 800;
+    font-size: 64px;
+    text-align: center;
+    overflow:scroll;
+}
