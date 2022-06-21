@@ -1,0 +1,19 @@
+<html lang="pl-PL">
+<head>
+   <meta charset="UTF-8">
+   <title>PSW</title>
+    <link rel='stylesheet' href='y.css'>
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+<h1>
+ Zadanie 5
+</h1>
+<h2>Szarik na spacerze w lesie na górze Chrobrego</h2>
+<a href="d.html" src="d.html">D.html</a><br>
+<a href="index.html" src="index.html">INDEX</a>
+<img src="1.jpg">
+</body>
+</html>
+
