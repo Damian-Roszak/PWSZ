@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <title>Tworzenie tabeli</title> 
+</head>
+<body>
+  <div>
+    <button onclick="insertData()"> Dodaj Dane </button>
+    <button onclick="selectData()"> Wyświetl dane</button>
+    <button onclick="deleteAllFromTab()"> Czyść tabelę </button>
+  </div>
+  <script>
+    const sql = require('mssql');
+    sql.connect('Server=127.0.0.1,1433;User Id=sa;Password=Pass@word;Database=bazy;TrustServerCertificate=true');
+
+
+    async function insertData(){
+      const tekst1 = Math.round(Math.random()*100)+'abc';
+      const tekst2 = Math.round(Math.random()*100)+'xyz';
+      const result = await sql.query(`INSERT INTO tab(a, b) values ('${tekst1}', '${tekst2}')`);
+      
+    }
+
+    function appendDataToBody(data){
+      const table = document.createElement('table');
+      data.forEach(row =>{
+        const dataRow = document.createElement('tr');
+        table.append(dataRow);
+        const cell1 = document.createElement('td');
+        const cell2 = document.createElement('td');
+        cell1.innerHTML = row.a;
+        cell2.innerHTML = row.b;
+        dataRow.append(cell1);
+        dataRow.append(cell2);
+      });
+      document.body.append(table);
+    }
+
+    async function selectData(){
+      const result = await sql.query`select * from tab`;
+      console.log(result);
+      appendDataToBody(result.recordsets[0]);
+    }
+
+    async function deleteAllFromTab(){
+      const result = await sql.query(`DELETE from tab`);
+      console.log(result);
+    }
+  </script>
+</body>
+</html>
