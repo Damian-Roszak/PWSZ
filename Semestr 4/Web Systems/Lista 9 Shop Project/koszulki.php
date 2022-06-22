@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["koszyk"] = 3;
+$_SESSION["koszyk"] = 0;
     $host = 'localhost';
 	$database = 'psw';
 	$user = 'root';
@@ -12,13 +12,13 @@ $_SESSION["koszyk"] = 3;
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbh->exec("SET CHARACTER SET utf8");
 try{    
-    $sql = "SELECT * FROM buty";
+    $sql = "SELECT * FROM koszulki";
     $sth = $dbh->prepare($sql);
     $sth->execute();          
     $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
+    //print "<pre>";
     //print_r($result);
-    print "</pre>";
+   // print "</pre>";
 }catch (Exception $e){
     $er = $e->getMessage();
     echo $er;
@@ -72,14 +72,13 @@ try{
 </div>
 <div id="content">
  <div id="newest-content">
-  <div class="nag">NOWOŚCI</div>
     <?php 
        foreach($result as $val)
           {
             
           echo'  
     <div class="product">
-       <a href="but1.php"> <span class="new">nowość</span>
+       <a href="koszulka.php"> <span class="new">nowość</span>
         <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
         <span class="product-name">'.$val["nazwa"].'</span>
         <span class="product-price">'.$val["cena"].'</span></a>
@@ -90,44 +89,6 @@ try{
             ';
           }
     ?>
-   </div>
- </div>
- <div id="featured-products">
- <div class="nag">Polecane Produkty</div>
-    <div class="product">
-      <a href="index.php">  <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/k3.jpeg">
-        <span class="product-name">Koszulka nocna - fajna bo prześwituje</span>
-        <span class="product-price">45,00 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/t3.jpeg">
-        <span class="product-name">XPERIA - prawie nowa</span>
-        <span class="product-price">599,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k1.jpeg">
-        <span class="product-name">T-shirt fajny bo z napisem</span>
-        <span class="product-price">77,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-       <a href="index.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/c.png">
-        <span class="product-name">Wózek z biedronki</span>
-        <span class="product-price">156,77 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
  </div>
 </div>
     

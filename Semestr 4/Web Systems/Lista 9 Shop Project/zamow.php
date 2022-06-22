@@ -1,39 +1,18 @@
-<?php
-session_start();
-$_SESSION["koszyk"] = 3;
-    $host = 'localhost';
-	$database = 'psw';
-	$user = 'root';
-	$password = '';
-	
-	$dbh1 = "mysql:host=$host;dbname=$database;charset=UTF8";
-
-	$dbh = new PDO($dbh1, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("SET CHARACTER SET utf8");
-try{    
-    $sql = "SELECT * FROM buty";
-    $sth = $dbh->prepare($sql);
-    $sth->execute();          
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
-    //print_r($result);
-    print "</pre>";
-}catch (Exception $e){
-    $er = $e->getMessage();
-    echo $er;
-}
-
-
-?>
 <html>
 <head>
-<title>Sklep internetowy - index 2</title>
+<title>Sklep internetowy - widok Koszyka</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1" />
+
 <link id="csslink" rel="stylesheet" type="text/css" href="styl.css" />
+
 <link rel="stylesheet" media="screen and (min-width: 524px)" href="desktop.css">
+<link rel="stylesheet" media="screen and (min-width: 524px)" href="fotoProdDesktop.css">
+<link rel="stylesheet" media="screen and (min-width: 524px)" href="desktopKoszyk.css">
 
 <link rel="stylesheet" media="screen and (max-width: 523px)" href="mobile.css">
+<link rel="stylesheet" media="screen and (max-width: 523px)" href="mobileKoszyk1.css">
+<link rel="stylesheet" media="screen and (max-width: 523px)" href="fotoProdMobile.css">
 </head>
 
 <body>
@@ -44,20 +23,15 @@ try{
       <span id="rejestr"><a id="rejestracja" href="register.php">  Zarejestruj się</a></span>
     </span>
 </div>
-<div id="baner">
-    <a href="index.php"><img id="imgBaner" src="pliki/logo.png"></a>
-</div>
 <div class="top-right">
    <span class="nav-right"> 
     <form>
-        <input id="szukajka" type="" name="szukaj"  pattern="+?"></input>
+        <input id="szukajka" type="" name="szukaj"></input>
         <button type="submit" class="szukBut" width="10px" height="10px"></button>
     </form>
         <a id="kosz" href="koszyk.php">
             <img src="pliki/c1.jpg">
-            <span>Koszyk (
-                <?php echo $_SESSION["koszyk"]; ?>
-            )</span>
+            <span>Koszyk (<?php echo $_SESSION["koszyk"]; ?>)</span>
         </a>
     </span> 
 </div>
@@ -70,65 +44,82 @@ try{
         <a href="koszulki.php">Koszulki</a>
     </span>
 </div>
-<div id="content">
- <div id="newest-content">
-  <div class="nag">NOWOŚCI</div>
-    <?php 
-       foreach($result as $val)
-          {
-            
-          echo'  
-    <div class="product">
-       <a href="but1.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
-        <span class="product-name">'.$val["nazwa"].'</span>
-        <span class="product-price">'.$val["cena"].'</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
+  <!---    --->
+<div id="content2">
+ 
+<!---ZAMÓWIENIE   --->
+
+<div id="zamowienie">
+        <div class="zamow-element">
+                <a href="#daneOsobowe" class="">Dane Osobowe</a>
+                <div id="daneOsobowe">
+                    <p>
+                            <input>Imie</input><br><br>
+                            <input>Nazwisko<input><br><br>
+                            <input>Nr Tel.:</input>
+                    </p>
+                </div>
+        </div>
+        
+        <div class="zamow-element">
+            <a href="#adresDost" class="">Adres dostawy</a>
+             <div id="adresDost">
+                 <p>
+                    <input>Ulica</input><br><br>
+                    <input>Nr domu / mieszkania</input><br><br>
+                    <input>Miejscowość</input>
+                    <input>Kod pocztowy</input>
+                 </p>
+            </div>
+        </div>
+        
+        
+        <div class="zamow-element">
+            <a href="#sposobDost" class="">Sposób dostawy</a>
+            <div id="sposobDost">
+                <p>
+                    <input>Kurier DPD</input><br><br>
+                    <input>InPost</input><br><br>
+                    <input>Komentarz</input>
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="zamow-element">
+            <a href="#sposobPlatnosci" class="">Sposób Płatności</a>
+            <div id="sposobPlatnosci">
+                <p>
+                    <input>Płatność przy odbiorze</input><br><br>
+                    <input>Przelew on-line</input><br><br>
+                    <img alt="" src="">
+                </p>
+            </div>
+        </div>
+
+</div>
+
+
+
+
+
+
+
+
+  <!---KONIEC ZAMÓWIENIE   --->
+
+  
+  <div class="panel-prawy">
+            <div class="cena-zakupu">
+                <span id="doZaplaty">DO ZAPŁATY</span>
+                <span id="ileRazem" class="fat">33 444,97 zł</span>
+                <form id="formPlace">
+                   <button id="place" class="fat">PŁATNOŚĆ I DOSTAWA</button> 
+                </form>
+            </div>
     </div>
-            ';
-          }
-    ?>
-   </div>
- </div>
- <div id="featured-products">
- <div class="nag">Polecane Produkty</div>
-    <div class="product">
-      <a href="index.php">  <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/k3.jpeg">
-        <span class="product-name">Koszulka nocna - fajna bo prześwituje</span>
-        <span class="product-price">45,00 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/t3.jpeg">
-        <span class="product-name">XPERIA - prawie nowa</span>
-        <span class="product-price">599,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k1.jpeg">
-        <span class="product-name">T-shirt fajny bo z napisem</span>
-        <span class="product-price">77,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-       <a href="index.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/c.png">
-        <span class="product-name">Wózek z biedronki</span>
-        <span class="product-price">156,77 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
- </div>
+  
+  
 </div>
     
 <div id="stopkaM">
@@ -213,7 +204,3 @@ try{
     <div id="producer">Sklep internetowy by: DamianRoszak.pl</div>
 </body>
 </html>
-<?php
-//mysqli_close($con);
-?>
-

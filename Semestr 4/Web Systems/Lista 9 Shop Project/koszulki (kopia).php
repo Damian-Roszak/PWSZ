@@ -1,34 +1,6 @@
-<?php
-session_start();
-$_SESSION["koszyk"] = 3;
-    $host = 'localhost';
-	$database = 'psw';
-	$user = 'root';
-	$password = '';
-	
-	$dbh1 = "mysql:host=$host;dbname=$database;charset=UTF8";
-
-	$dbh = new PDO($dbh1, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("SET CHARACTER SET utf8");
-try{    
-    $sql = "SELECT * FROM buty";
-    $sth = $dbh->prepare($sql);
-    $sth->execute();          
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
-    //print_r($result);
-    print "</pre>";
-}catch (Exception $e){
-    $er = $e->getMessage();
-    echo $er;
-}
-
-
-?>
 <html>
 <head>
-<title>Sklep internetowy - index 2</title>
+<title>Sklep internetowy - kategoria koszulki</title>
 <meta charset="UTF-8">
 <link id="csslink" rel="stylesheet" type="text/css" href="styl.css" />
 <link rel="stylesheet" media="screen and (min-width: 524px)" href="desktop.css">
@@ -50,14 +22,12 @@ try{
 <div class="top-right">
    <span class="nav-right"> 
     <form>
-        <input id="szukajka" type="" name="szukaj"  pattern="+?"></input>
+        <input id="szukajka" type="" name="szukaj"></input>
         <button type="submit" class="szukBut" width="10px" height="10px"></button>
     </form>
         <a id="kosz" href="koszyk.php">
             <img src="pliki/c1.jpg">
-            <span>Koszyk (
-                <?php echo $_SESSION["koszyk"]; ?>
-            )</span>
+            <span>Koszyk (<?php echo $_SESSION["koszyk"]; ?>)</span>
         </a>
     </span> 
 </div>
@@ -73,24 +43,116 @@ try{
 <div id="content">
  <div id="newest-content">
   <div class="nag">NOWOŚCI</div>
-    <?php 
-       foreach($result as $val)
-          {
-            
-          echo'  
-    <div class="product">
-       <a href="but1.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
-        <span class="product-name">'.$val["nazwa"].'</span>
-        <span class="product-price">'.$val["cena"].'</span></a>
+  <?php
+  echo   <div class="product">
+       <a href="koszulka.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k1.jpg">
+        <span class="product-name">Koszulki małżeńskie</span>
+        <span class="product-price">900,00 zł</span></a>
         <form>
         <button type="submit" class="do-koszyka">Do koszyka</button>
         </form>
     </div>
-            ';
-          }
-    ?>
-   </div>
+  ?>
+    <div class="product">
+       <a href="koszulka.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k2.jpg">
+        <span class="product-name">Koszulka pakera</span>
+        <span class="product-price">50,00 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="koszulka.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k.jpeg">
+        <span class="product-name">Koszulka - oryginalna bo droga</span>
+        <span class="product-price">150,00 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k3.jpg">
+        <span class="product-name">Koszulka maskująca</span>
+        <span class="product-price">33 242,99 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+        <a href="index.php"><span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k4.jpg">
+        <span class="product-name">Koszulka z kobietą</span>
+        <span class="product-price">349,88 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k5.jpg">
+        <span class="product-name">Koszulka patriotyczna</span>
+        <span class="product-price">800,00 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+      <a href="index.php">  <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k2.jpeg">
+        <span class="product-name">Koszulka super bo z obrazkiem wszystkiego</span>
+        <span class="product-price">132,44 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k6.webp">
+        <span class="product-name">Koszulka piguły</span>
+        <span class="product-price">21,58 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k7.png">
+        <span class="product-name">Koszulka faceta co mieszka z zołzą</span>
+        <span class="product-price">1234,56 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+      <a href="index.php">  <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k8.jpg">
+        <span class="product-name">Koszulka bojkotu wyborów</span>
+        <span class="product-price">35 621,78 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k9.jpg">
+        <span class="product-name">Koszulka z wilkiem</span>
+        <span class="product-price">99,99 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k10.webp">
+        <span class="product-name">Koszulka mortal kombat</span>
+        <span class="product-price">546,17 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
  </div>
  <div id="featured-products">
  <div class="nag">Polecane Produkty</div>
@@ -104,16 +166,16 @@ try{
         </form>
     </div>
     <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/t3.jpeg">
-        <span class="product-name">XPERIA - prawie nowa</span>
+      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k11.webp">
+        <span class="product-name">Koszulka wilk Ryden</span>
         <span class="product-price">599,99 zł</span></a>
         <form>
         <button type="submit" class="do-koszyka">Do koszyka</button>
         </form>
     </div>
     <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k1.jpeg">
-        <span class="product-name">T-shirt fajny bo z napisem</span>
+      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k12.webp">
+        <span class="product-name">Koszulka z smokiem</span>
         <span class="product-price">77,99 zł</span></a>
         <form>
         <button type="submit" class="do-koszyka">Do koszyka</button>
@@ -121,8 +183,8 @@ try{
     </div>
     <div class="product">
        <a href="index.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/c.png">
-        <span class="product-name">Wózek z biedronki</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k13.jpeg">
+        <span class="product-name">Koszulka z Songiem</span>
         <span class="product-price">156,77 zł</span></a>
         <form>
         <button type="submit" class="do-koszyka">Do koszyka</button>
@@ -213,7 +275,3 @@ try{
     <div id="producer">Sklep internetowy by: DamianRoszak.pl</div>
 </body>
 </html>
-<?php
-//mysqli_close($con);
-?>
-

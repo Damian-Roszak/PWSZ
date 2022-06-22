@@ -1,34 +1,6 @@
-<?php
-session_start();
-$_SESSION["koszyk"] = 3;
-    $host = 'localhost';
-	$database = 'psw';
-	$user = 'root';
-	$password = '';
-	
-	$dbh1 = "mysql:host=$host;dbname=$database;charset=UTF8";
-
-	$dbh = new PDO($dbh1, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("SET CHARACTER SET utf8");
-try{    
-    $sql = "SELECT * FROM buty";
-    $sth = $dbh->prepare($sql);
-    $sth->execute();          
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
-    //print_r($result);
-    print "</pre>";
-}catch (Exception $e){
-    $er = $e->getMessage();
-    echo $er;
-}
-
-
-?>
 <html>
 <head>
-<title>Sklep internetowy - index 2</title>
+<title>Sklep internetowy</title>
 <meta charset="UTF-8">
 <link id="csslink" rel="stylesheet" type="text/css" href="styl.css" />
 <link rel="stylesheet" media="screen and (min-width: 524px)" href="desktop.css">
@@ -50,14 +22,12 @@ try{
 <div class="top-right">
    <span class="nav-right"> 
     <form>
-        <input id="szukajka" type="" name="szukaj"  pattern="+?"></input>
+        <input id="szukajka" type="" name="szukaj"></input>
         <button type="submit" class="szukBut" width="10px" height="10px"></button>
     </form>
         <a id="kosz" href="koszyk.php">
             <img src="pliki/c1.jpg">
-            <span>Koszyk (
-                <?php echo $_SESSION["koszyk"]; ?>
-            )</span>
+            <span>Koszyk (<?php echo $_SESSION["koszyk"]; ?>)</span>
         </a>
     </span> 
 </div>
@@ -71,64 +41,35 @@ try{
     </span>
 </div>
 <div id="content">
- <div id="newest-content">
-  <div class="nag">NOWOŚCI</div>
-    <?php 
-       foreach($result as $val)
-          {
-            
-          echo'  
-    <div class="product">
-       <a href="but1.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
-        <span class="product-name">'.$val["nazwa"].'</span>
-        <span class="product-price">'.$val["cena"].'</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
+    <div class="foto">
+        <section class="gallery">
+  <div class="gallery__item">
+    <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+    <img class="gallery__img" src="https://picsum.photos/id/1015/600/400.jpg" alt=""/>
+    <label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt=""/></label>
+  </div>
+  <div class="gallery__item">
+    <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+    <img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt=""/>
+    <label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt=""/></label>
+  </div>
+  <div class="gallery__item">
+    <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+    <img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt=""/>
+    <label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt=""/></label>
+  </div>
+  <div class="gallery__item">
+    <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+    <img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt=""/>
+    <label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt=""/></label>
+  </div>
+</section>
     </div>
-            ';
-          }
-    ?>
-   </div>
- </div>
- <div id="featured-products">
- <div class="nag">Polecane Produkty</div>
-    <div class="product">
-      <a href="index.php">  <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/k3.jpeg">
-        <span class="product-name">Koszulka nocna - fajna bo prześwituje</span>
-        <span class="product-price">45,00 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
+    
+    <div class="opis">
+    
     </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/t3.jpeg">
-        <span class="product-name">XPERIA - prawie nowa</span>
-        <span class="product-price">599,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k1.jpeg">
-        <span class="product-name">T-shirt fajny bo z napisem</span>
-        <span class="product-price">77,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-       <a href="index.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/c.png">
-        <span class="product-name">Wózek z biedronki</span>
-        <span class="product-price">156,77 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
- </div>
+
 </div>
     
 <div id="stopkaM">
@@ -213,7 +154,3 @@ try{
     <div id="producer">Sklep internetowy by: DamianRoszak.pl</div>
 </body>
 </html>
-<?php
-//mysqli_close($con);
-?>
-

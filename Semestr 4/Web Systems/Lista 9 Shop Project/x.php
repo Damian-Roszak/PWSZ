@@ -1,39 +1,13 @@
-<?php
-session_start();
-$_SESSION["koszyk"] = 3;
-    $host = 'localhost';
-	$database = 'psw';
-	$user = 'root';
-	$password = '';
-	
-	$dbh1 = "mysql:host=$host;dbname=$database;charset=UTF8";
-
-	$dbh = new PDO($dbh1, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("SET CHARACTER SET utf8");
-try{    
-    $sql = "SELECT * FROM buty";
-    $sth = $dbh->prepare($sql);
-    $sth->execute();          
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
-    //print_r($result);
-    print "</pre>";
-}catch (Exception $e){
-    $er = $e->getMessage();
-    echo $er;
-}
-
-
-?>
 <html>
 <head>
-<title>Sklep internetowy - index 2</title>
+<title>Sklep internetowy - widok produktu buty</title>
 <meta charset="UTF-8">
 <link id="csslink" rel="stylesheet" type="text/css" href="styl.css" />
 <link rel="stylesheet" media="screen and (min-width: 524px)" href="desktop.css">
+<link rel="stylesheet" media="screen and (min-width: 524px)" href="fotoProdDesktop.css">
 
 <link rel="stylesheet" media="screen and (max-width: 523px)" href="mobile.css">
+<link rel="stylesheet" media="screen and (max-width: 523px)" href="fotoProdMobile.css">
 </head>
 
 <body>
@@ -50,14 +24,12 @@ try{
 <div class="top-right">
    <span class="nav-right"> 
     <form>
-        <input id="szukajka" type="" name="szukaj"  pattern="+?"></input>
+        <input id="szukajka" type="" name="szukaj"></input>
         <button type="submit" class="szukBut" width="10px" height="10px"></button>
     </form>
         <a id="kosz" href="koszyk.php">
             <img src="pliki/c1.jpg">
-            <span>Koszyk (
-                <?php echo $_SESSION["koszyk"]; ?>
-            )</span>
+            <span>Koszyk (<?php echo $_SESSION["koszyk"]; ?>)</span>
         </a>
     </span> 
 </div>
@@ -71,64 +43,41 @@ try{
     </span>
 </div>
 <div id="content">
- <div id="newest-content">
-  <div class="nag">NOWOŚCI</div>
-    <?php 
-       foreach($result as $val)
-          {
+    <div class="foto">
+      <span class="new">nowość</span>
+        <img class="mainFoto" max-width="600px" max-height="400px" src="pliki/but1.jpeg"><br>
+        <img class="f1 f" width="140px" height="100px" src="pliki/b6.jpg">
+        <img class="f2 f" width="140px" height="100px" src="pliki/b9.jpg">
+        <img class="f3 f" width="140px" height="100px" src="pliki/b5.jpg">
+        <img class="f4 f" width="140px" height="100px" src="pliki/b3.jpg">
+    </div>
+    
+    <div class="panel-prawy">
+            <div class="tytulCena">
+                <span id="tytul">Buty - cichobieżki</span>
+                <span id="cena">100,00 zł</span>
+                <div id="ileKoszyk">
+                    <form id="formButton">
+                        <input id="ile" placeholder="1" type="number" step="1" min="1">
+                        <button class="doKoszykaDuzy">DODAJ DO KOSZYKA</button>
+                    </form>
+                </div>
+            </div>
+            <div class="socialmedia">
             
-          echo'  
-    <div class="product">
-       <a href="but1.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
-        <span class="product-name">'.$val["nazwa"].'</span>
-        <span class="product-price">'.$val["cena"].'</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
+            </div>
+            <div class="blokOpisu">
+                <a href="#opis">Opis</a><a href="#detale">Szczegóły produktu</a>
+                <div id="opis">
+                   <span class="nfo"> Super buty do biegania i nie tylko. Super buty do biegania i nie tylko. Super buty do biegania i nie tylko. Super buty do biegania i nie tylko. Super buty do biegania i nie tylko.</span>
+                </div>                
+                
+                <div id="detale">
+                    Buty na wagę złota. Buty na wagę złota. Buty na wagę złota. Buty na wagę złota. Buty na wagę złota. Buty na wagę złota. Buty na wagę złota. Buty na wagę złota.
+                </div>
+            </div>
     </div>
-            ';
-          }
-    ?>
-   </div>
- </div>
- <div id="featured-products">
- <div class="nag">Polecane Produkty</div>
-    <div class="product">
-      <a href="index.php">  <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/k3.jpeg">
-        <span class="product-name">Koszulka nocna - fajna bo prześwituje</span>
-        <span class="product-price">45,00 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/t3.jpeg">
-        <span class="product-name">XPERIA - prawie nowa</span>
-        <span class="product-price">599,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k1.jpeg">
-        <span class="product-name">T-shirt fajny bo z napisem</span>
-        <span class="product-price">77,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-       <a href="index.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/c.png">
-        <span class="product-name">Wózek z biedronki</span>
-        <span class="product-price">156,77 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
- </div>
+
 </div>
     
 <div id="stopkaM">
@@ -213,7 +162,3 @@ try{
     <div id="producer">Sklep internetowy by: DamianRoszak.pl</div>
 </body>
 </html>
-<?php
-//mysqli_close($con);
-?>
-

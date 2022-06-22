@@ -1,39 +1,20 @@
 <?php
 session_start();
-$_SESSION["koszyk"] = 3;
-    $host = 'localhost';
-	$database = 'psw';
-	$user = 'root';
-	$password = '';
-	
-	$dbh1 = "mysql:host=$host;dbname=$database;charset=UTF8";
-
-	$dbh = new PDO($dbh1, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("SET CHARACTER SET utf8");
-try{    
-    $sql = "SELECT * FROM buty";
-    $sth = $dbh->prepare($sql);
-    $sth->execute();          
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
-    //print_r($result);
-    print "</pre>";
-}catch (Exception $e){
-    $er = $e->getMessage();
-    echo $er;
-}
-
-
 ?>
 <html>
 <head>
-<title>Sklep internetowy - index 2</title>
+<title>Sklep internetowy - widok Koszyka</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1" />
 <link id="csslink" rel="stylesheet" type="text/css" href="styl.css" />
+
 <link rel="stylesheet" media="screen and (min-width: 524px)" href="desktop.css">
+<link rel="stylesheet" media="screen and (min-width: 524px)" href="fotoProdDesktop.css">
+<link rel="stylesheet" media="screen and (min-width: 524px)" href="desktopKoszyk.css">
 
 <link rel="stylesheet" media="screen and (max-width: 523px)" href="mobile.css">
+<link rel="stylesheet" media="screen and (max-width: 523px)" href="mobileKoszyk1.css">
+<link rel="stylesheet" media="screen and (max-width: 523px)" href="fotoProdMobile.css">
 </head>
 
 <body>
@@ -50,7 +31,7 @@ try{
 <div class="top-right">
    <span class="nav-right"> 
     <form>
-        <input id="szukajka" type="" name="szukaj"  pattern="+?"></input>
+        <input id="szukajka" type="" name="szukaj"></input>
         <button type="submit" class="szukBut" width="10px" height="10px"></button>
     </form>
         <a id="kosz" href="koszyk.php">
@@ -70,65 +51,95 @@ try{
         <a href="koszulki.php">Koszulki</a>
     </span>
 </div>
-<div id="content">
- <div id="newest-content">
-  <div class="nag">NOWOŚCI</div>
-    <?php 
-       foreach($result as $val)
-          {
+  <!---    --->
+<div id="content2">
+  <!---  lista-zakupow  --->
+  <div class="lista-zakupow">
+     <!--- item-zakupowy 1111111   --->
+     <div class="item-zakupowy">
+           <a href="but1.php"> <img class="miniFoto" width="119px" height="119px" src="pliki/but1.jpeg" alt=""></a>
+         <div class="tytulek">
+            <a class="co" href="but1.php"><span class="co">Buty - cichobieżki</span> </a>
+            <span>100,00 zł</span>  
+         </div>  
+                     <div class="tytulek2">
+                         <div id="ileKoszyk">
+                                <form id="formButton">
+                                    <input id="ile" placeholder="4" type="number" step="1" min="1" pattern="\d{1,}">
+                                </form>
+                         </div>
+                         
+                    <span class="fat">Razem:&nbsp;</span><br>
+                    <span id="sumaZaProdukt">400,00 zł &nbsp;</span>
+                    <a href=""><img id="wywal" width="35px" height="32px" src="pliki/smietnik.png"></a>
+                
+                         
+                 </div><!--- KONIEC tytulek2 --->
+         
             
-          echo'  
-    <div class="product">
-       <a href="but1.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
-        <span class="product-name">'.$val["nazwa"].'</span>
-        <span class="product-price">'.$val["cena"].'</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
+     </div>  <!--- KONIEC item-zakupowy  --->
+
+
+
+        <div class="item-zakupowy">
+           <a href="tel1.php"> <img class="miniFoto" width="119px" height="119px" src="pliki/t1.jpeg"></a>
+          <div class="tytulek">  
+            <a class="co" href="tel1.php"><span class="co">Pancerny telefon</span> </a>
+            <span class="zaIle">32 999,97 zł</span>  
+          </div>  
+            <div class="tytulek2">
+              <div id="ileKoszyk">
+                    <form id="formButton">
+                        <input id="ile" placeholder="1" type="number" step="1" min="1" pattern="\d{1,}">
+                    </form>
+              </div>
+            
+                <span class="fat ">Razem: &nbsp;</span><br>
+                <span id="sumaZaProdukt">32 999,97 zł &nbsp;</span>
+                <a href=""><img id="wywal" width="35px" height="32px" src="pliki/smietnik.png"></a>
+             </div><!--- KONIEC tytulek2 --->
+        </div>
+
+
+
+
+        <div class="item-zakupowy">
+          <a href="koszulka.php"><img class="miniFoto" width="119px" height="119px" src="pliki/k3.jpeg"></a>
+          <div class="tytulek"> 
+            <a class="co" href="koszulka.php"><span class="co">Koszulka nocna</span> </a>
+            <span class="zaIle">45,00 zł</span>   
+          </div>
+                <div class="tytulek2"> 
+                    <div id="ileKoszyk">
+                        <form id="formButton">
+                            <input id="ile" placeholder="1" type="number" step="1" min="1" pattern="\d{1,}">
+                        </form>
+                    </div>
+                    <span class="fat ">Razem: &nbsp;</span><br>
+                    <span id="sumaZaProdukt">45,00 zł &nbsp;</span>
+                    <a href=""><img id="wywal" width="35px" height="32px" src="pliki/smietnik.png"></a>
+                </div>
+            
+        </div>
+
+
+
+
+
+  <!--- KONIEC lista-zakupow  --->
+  </div>    
+  
+  <div class="panel-prawy">
+            <div class="cena-zakupu">
+                <span id="doZaplaty">DO ZAPŁATY</span>
+                <span id="ileRazem" class="fat">33 444,97 zł</span>
+                <form id="formPlace">
+                   <button id="place" class="fat">PŁATNOŚĆ I DOSTAWA</button> 
+                </form>
+            </div>
     </div>
-            ';
-          }
-    ?>
-   </div>
- </div>
- <div id="featured-products">
- <div class="nag">Polecane Produkty</div>
-    <div class="product">
-      <a href="index.php">  <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/k3.jpeg">
-        <span class="product-name">Koszulka nocna - fajna bo prześwituje</span>
-        <span class="product-price">45,00 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/t3.jpeg">
-        <span class="product-name">XPERIA - prawie nowa</span>
-        <span class="product-price">599,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k1.jpeg">
-        <span class="product-name">T-shirt fajny bo z napisem</span>
-        <span class="product-price">77,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-       <a href="index.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/c.png">
-        <span class="product-name">Wózek z biedronki</span>
-        <span class="product-price">156,77 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
- </div>
+  
+  
 </div>
     
 <div id="stopkaM">
@@ -213,7 +224,3 @@ try{
     <div id="producer">Sklep internetowy by: DamianRoszak.pl</div>
 </body>
 </html>
-<?php
-//mysqli_close($con);
-?>
-

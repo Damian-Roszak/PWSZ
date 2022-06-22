@@ -1,39 +1,17 @@
-<?php
-session_start();
-$_SESSION["koszyk"] = 3;
-    $host = 'localhost';
-	$database = 'psw';
-	$user = 'root';
-	$password = '';
-	
-	$dbh1 = "mysql:host=$host;dbname=$database;charset=UTF8";
-
-	$dbh = new PDO($dbh1, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("SET CHARACTER SET utf8");
-try{    
-    $sql = "SELECT * FROM buty";
-    $sth = $dbh->prepare($sql);
-    $sth->execute();          
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
-    //print_r($result);
-    print "</pre>";
-}catch (Exception $e){
-    $er = $e->getMessage();
-    echo $er;
-}
-
-
-?>
 <html>
 <head>
-<title>Sklep internetowy - index 2</title>
+<title>Sklep internetowy - widok Koszyka</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1" />
 <link id="csslink" rel="stylesheet" type="text/css" href="styl.css" />
+
 <link rel="stylesheet" media="screen and (min-width: 524px)" href="desktop.css">
+<link rel="stylesheet" media="screen and (min-width: 524px)" href="fotoProdDesktop.css">
+<link rel="stylesheet" media="screen and (min-width: 524px)" href="desktopKoszyk.css">
 
 <link rel="stylesheet" media="screen and (max-width: 523px)" href="mobile.css">
+<link rel="stylesheet" media="screen and (max-width: 523px)" href="mobileKoszyk1.css">
+<link rel="stylesheet" media="screen and (max-width: 523px)" href="fotoProdMobile.css">
 </head>
 
 <body>
@@ -50,14 +28,12 @@ try{
 <div class="top-right">
    <span class="nav-right"> 
     <form>
-        <input id="szukajka" type="" name="szukaj"  pattern="+?"></input>
+        <input id="szukajka" type="" name="szukaj"></input>
         <button type="submit" class="szukBut" width="10px" height="10px"></button>
     </form>
         <a id="kosz" href="koszyk.php">
             <img src="pliki/c1.jpg">
-            <span>Koszyk (
-                <?php echo $_SESSION["koszyk"]; ?>
-            )</span>
+            <span>Koszyk (<?php echo $_SESSION["koszyk"]; ?>)</span>
         </a>
     </span> 
 </div>
@@ -70,65 +46,66 @@ try{
         <a href="koszulki.php">Koszulki</a>
     </span>
 </div>
-<div id="content">
- <div id="newest-content">
-  <div class="nag">NOWOŚCI</div>
-    <?php 
-       foreach($result as $val)
-          {
-            
-          echo'  
-    <div class="product">
-       <a href="but1.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
-        <span class="product-name">'.$val["nazwa"].'</span>
-        <span class="product-price">'.$val["cena"].'</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-            ';
-          }
-    ?>
-   </div>
- </div>
- <div id="featured-products">
- <div class="nag">Polecane Produkty</div>
-    <div class="product">
-      <a href="index.php">  <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/k3.jpeg">
-        <span class="product-name">Koszulka nocna - fajna bo prześwituje</span>
-        <span class="product-price">45,00 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/t3.jpeg">
-        <span class="product-name">XPERIA - prawie nowa</span>
-        <span class="product-price">599,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-      <a href="index.php">  <img class="foto" width="220px" height="231px" src="pliki/k1.jpeg">
-        <span class="product-name">T-shirt fajny bo z napisem</span>
-        <span class="product-price">77,99 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
-    <div class="product">
-       <a href="index.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="pliki/c.png">
-        <span class="product-name">Wózek z biedronki</span>
-        <span class="product-price">156,77 zł</span></a>
-        <form>
-        <button type="submit" class="do-koszyka">Do koszyka</button>
-        </form>
-    </div>
- </div>
+  <!---    --->
+<div id="content2">
+
+
+<!---ZAMÓWIENIE   --->
+
+<div id="stopkaM">
+        <div class="stopka-elementM">
+                <a href="#help" class="nagA">Pomoc:<img class="arr" src="pliki/a.jpg"></a>
+                <div id="help">
+                    <p>
+                            <a href="">Regulamin</a><br><br>
+                            <a href="">Polityka prywatności</a><br><br>
+                            <a href="">Zwroty i reklamacje</a>
+                    </p>
+                </div>
+        </div>
+        
+        <div class="stopka-elementM">
+            <a href="#mojeKonto" class="nagA">Moje konto:<img class="arr" src="pliki/a.jpg"></a>
+             <div id="mojeKonto">
+                 <p class="p2">
+                    <a href="">Moje zamówienia</a><br><br>
+                    <a href="">Ustawienia konta</a><br><br>
+                    <a href="">Przechowalnia</a>
+                 </p>
+            </div>
+        </div>
+        
+        
+        <div class="stopka-elementM">
+            <a href="#platDost" class="nagA">Płatność i dostawa:<img class="arr" src="pliki/a.jpg"></a>
+            <div id="platDost">
+                <p>
+                    <a href="">Koszty wysyłki</a><br><br>
+                    <a href="">Formy płatności</a>
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="stopka-elementM">
+            <a href="#oNas" class="nagA">O Nas:<img class="arr" src="pliki/a.jpg"></a>
+            <div id="oNas">
+                <p>
+                    <a href="">Kontakt</a>
+                </p>
+            </div>
+        </div>
+
+</div>
+
+
+
+
+
+
+
+
+  <!---KONIEC ZAMÓWIENIE   --->
 </div>
     
 <div id="stopkaM">
@@ -213,7 +190,3 @@ try{
     <div id="producer">Sklep internetowy by: DamianRoszak.pl</div>
 </body>
 </html>
-<?php
-//mysqli_close($con);
-?>
-

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["koszyk"] = 3;
+$_SESSION["koszyk"] = 0;
     $host = 'localhost';
 	$database = 'psw';
 	$user = 'root';

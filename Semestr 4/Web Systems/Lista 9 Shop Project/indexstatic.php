@@ -1,24 +1,9 @@
 <?php
 session_start();
-$_SESSION["koszyk"] = 3;
-    $host = 'localhost';
-	$database = 'psw';
-	$user = 'root';
-	$password = '';
-	
-	$dbh1 = "mysql:host=$host;dbname=$database;charset=UTF8";
-
-	$dbh = new PDO($dbh1, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("SET CHARACTER SET utf8");
-try{    
-    $sql = "SELECT * FROM buty";
-    $sth = $dbh->prepare($sql);
-    $sth->execute();          
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
-    print "<pre>";
-    //print_r($result);
-    print "</pre>";
+$_SESSION["koszyk"] = 0;
+try{
+    
+   
 }catch (Exception $e){
     $er = $e->getMessage();
     echo $er;
@@ -28,7 +13,7 @@ try{
 ?>
 <html>
 <head>
-<title>Sklep internetowy - index 2</title>
+<title>Sklep internetowy</title>
 <meta charset="UTF-8">
 <link id="csslink" rel="stylesheet" type="text/css" href="styl.css" />
 <link rel="stylesheet" media="screen and (min-width: 524px)" href="desktop.css">
@@ -73,24 +58,119 @@ try{
 <div id="content">
  <div id="newest-content">
   <div class="nag">NOWOŚCI</div>
-    <?php 
-       foreach($result as $val)
-          {
-            
-          echo'  
     <div class="product">
+    <?php 
+       //while( $paraButy = $buty->fetch_assoc()){
+       //$paraButy["fot1"]
+      // }
+    ?>
        <a href="but1.php"> <span class="new">nowość</span>
-        <img class="foto" width="220px" height="231px" src="'.$val["fot1"].'">
-        <span class="product-name">'.$val["nazwa"].'</span>
-        <span class="product-price">'.$val["cena"].'</span></a>
+        <img class="foto" width="220px" height="231px" src="<?php //$paraButy["fot1"] ?>">
+        <span class="product-name"><?php //$paraButy["nazwa"] ?></span>
+        <span class="product-price"><?php //$paraButy["cena"] ?></span></a>
         <form>
         <button type="submit" class="do-koszyka">Do koszyka</button>
         </form>
     </div>
-            ';
-          }
-    ?>
-   </div>
+    <div class="product">
+       <a href="but1.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/but.jpeg">
+        <span class="product-name">But gdyby komuś brakowało</span>
+        <span class="product-price">50,00 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="koszulka.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k.jpeg">
+        <span class="product-name">Koszulka - oryginalna bo droga</span>
+        <span class="product-price">150,00 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="tel1.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/t2.jpeg">
+        <span class="product-name">Pancerny telefon</span>
+        <span class="product-price">33 242,99 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+        <a href="index.php"><span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/b.jpeg">
+        <span class="product-name">Cichobiegi z zabudową stopami</span>
+        <span class="product-price">349,88 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/t4.jpeg">
+        <span class="product-name">Telefon + mydelniczka + lusterko</span>
+        <span class="product-price">800,00 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+      <a href="index.php">  <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/k2.jpeg">
+        <span class="product-name">Koszulka super bo z obrazkiem wszystkiego</span>
+        <span class="product-price">132,44 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/lupa.jpg">
+        <span class="product-name">Lupa do powiększania</span>
+        <span class="product-price">21,58 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/t.jpeg">
+        <span class="product-name">Pancerna komureczka</span>
+        <span class="product-price">1234,56 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+      <a href="index.php">  <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/t1.jpeg">
+        <span class="product-name">Pancerna porcelanka</span>
+        <span class="product-price">35 621,78 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/ubuntu.jpg">
+        <span class="product-name">Ubuntu Linux - safety first</span>
+        <span class="product-price">99,99 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
+    <div class="product">
+       <a href="index.php"> <span class="new">nowość</span>
+        <img class="foto" width="220px" height="231px" src="pliki/w.webp">
+        <span class="product-name">Serwisowanie WordPress'a</span>
+        <span class="product-price">546,17 zł</span></a>
+        <form>
+        <button type="submit" class="do-koszyka">Do koszyka</button>
+        </form>
+    </div>
  </div>
  <div id="featured-products">
  <div class="nag">Polecane Produkty</div>
