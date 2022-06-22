@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bazy Danych</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <button onclick="createTable()">Stwórz tabelę</button>
+    <button onclick="endConnection()">Zakończ połączenie</button>
+    <button onclick="promiseExample()">Przykład promise</button>
+    <button onclick="parametersExample()">Przykład query z parametrami</button>
+    <button onclick="getFields()"> Pobierz wszystkie dane z tabeli</button>
+    <div id="div"></div>
+  </div>
+  <script>
+    const { Client } = require('pg');
+
+    const client = new Client({
+      host: "127.0.0.1",
+      port: 5432,
+      database: "baza",
+      user: "user",
+      password: "password"
+    });
+    client.connect();
+
+    function createTable(){
+      const query = `
+        CREATE TABLE studenci(
+          name varchar,
+          surname varchar,
+          age int
+        );
+      `;
+      client.query(query, (err, res)=>{
+        if(err){
+          console.log(err);
+          return;
+        }
+        console.log("Tabela stworzona");
+      })
+    }
+
+    function promiseExample(){
+      client.query("SELECT NOW() as now")
+      .then(res=>console.log(res.rows[0]))
+      .catch(err=> console.log(e));
+    }
+
+    function parametersExample(){
+      const sql = "INSERT INTO studenci(name, surname,age) VALUES($1, $2, $3) RETURNING *";
+      const longName = [
+        "Jan",
+        "Marian",
+        "Drugi",
+        "z rodu Potockich"
+      ];
+      const parameters = [longName, "Kowalski", 15];
+      client.query(sql, parameters)
+      .then(res=>{
+        console.log(res.rows[0]);
+      })
+      .catch(err=>console.log(err));
+    }
+
+    async function getFields(){
+      const sql = "SELECT * FROM studenci";
+      const query = {
+        text: sql,
+        rowMode: 'array',
+      };
+      const result = await client.query(query);
+      const div = document.querySelector("#div");
+      div.innerHTML = JSON.stringify(result.rows);
+    }
+
+    function endConnection(){
+      client.end();
+    }
+  </script>
+</body>
+</html>
