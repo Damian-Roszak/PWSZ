@@ -1,0 +1,480 @@
+ZADANIE 1:
+1. Moduł tworzenia kont dla klientów i pracowników
+ - wysłanie maila z loginem i hasłem
+ - role: admin, pracownik, klient
+   Admin: zarządzanie kontami, zarządzanie komunikatami, zarządzanie archiwami plików klientów
+   Pracownik: tworzenie kont klientów, akceptowanie zmian danych wprowadzonych przez klientów, zarządzanie archiwami plików klientów, zarządzanie komunikatami
+   Klient: dodawanie plików, odczytywanie komunikatów, wprowadzenie zmian danych swojej firmy(wymaga akceptacji przez admina/pracownika)
+
+2. Moduł zarządzania kontami:
+ - dodawanie, usuwanie, edycja kont i danych
+ - stworzenie konta będzie potwierdzane automatycznym wysłaniem maila
+ - możliwość podglądu podsumowania klienta
+
+3. Moduł komunikatów
+ - dodawanie komunikatów dla wybranych kont(klientów, pracowników), grup(klient, pracownik), lub wszystkich
+ - możliwość odczytywania komunikatów jako strona główna
+ - dodanie komunikatu powoduje wysłanie maila do odbiorców danego komunikatu
+- możliwość przeglądania komunikatów przez klienta (admin wszystkich),
+- tagowanie komunikatów jako odczytane/nieodczytane,
+- możliwość przeglądania archiwum komunikatów
+
+
+4. Moduł archiwum plików klientów
+ - dodawanie, usuwanie, przeglądanie plików swoich, lub wszystkich zależnie od roli(klient tylko swoje)
+ - dodanie pliku wysyła maila z powiadomieniem (dodanie przez klienta wysyła maila do admina, dodanie przez admina/pracownika wysyła maila do klienta)
+ - wyszukiwanie plików po: nazwie, przypisanym kliencie, zakresie dat
+ - sortowanie po: dacie
+ - możliwość wyświetlania wszystkich plików klienta po wejściu w podsumowanie jego profilu
+
+5. Moduł zmiany
+ - klient ma możliwość zasugerowania zmian danych, np. nazwa firmy, lub nip
+ - zmianę danych
+
+6. Moduł kontaktowy
+ - formularz kontaktowy, który wysyła tylko maila do admina
+ 
+ZADANIE 2:
+ wykonania bota , który miałby za zadanie sprawdzać czeskie strony z ogłoszeniami motoryzacyjnymi i po wybraniu odpowiednich kryterów informować mnie w jak najszybmszym czasie o pojawieniu się oferty przez mail sms bądż jakąś inną formę
+ 
+ZADANIE 3:
+wykonanie Lockera CPA/PPA.
+Technologia:
+Po stronie użytkownika framework będzie oparty o Angular 8 z wykorzystaniem https://akveo.github.io/ngx-admin/.
+Backend obsługiwany będzie przez Laravel w najnowszej dostępnej wersji. Na ten moment jest to 5.8
+Autoryzacja endpointów odbywać się będzie poprzez o2Auth.
+Aplikacja musi umożliwiać obsługę wielu języków.
+Do wykonania oraz wyceny (Proszę wyceniać każdy element osobno, front i backend również).
+Content Locker CPA
+Captcha Locker
+File Locker
+Ściana ofert - Mobile Rewards
+
+ZADANIE 4:
+Zlecę wykonanie aplikacji na Android i iOS przy użyciu technologii Flutter lub React Native. Aplikacja typu komunikator/chat między użytkownikami z możliwością wysyłania zdjęć
+
+ZADANIE 5:
+do wykonania programu/software'u z uzyciem betfaira. Chodzi o to by program pobieral dane z jednej strony (wyscigi konne) i stawial automatycznie wybrane wedlug przedzialu konie na moim koncie betfair. Prosze o informacje czy ktos jest w stanie cos takiego zrobic.
+
+ZADANIE 6:
+aplikacji mobilnej Android/iOS dla systemu do zarządzania szkołą na podstawie strony www. Główne funkcje: Użytkownik po zalogowaniu się do aplikacji ma dostęp do harmonogram zajęć z przypomnieniami push-up o zajęciach.
+
+ZADANIE 7:
+System do obsługi cateringu i baru z aplikacją na android.
+Klient może zamówić posiłki, catering i dokonać płatności dostaje informacje gdy jego posiłek wyrusza w droge.
+moze ocenic posiłki z cateringu oraz pojedyncze zamowienia
+Kucharz ma dostęp do listy zamowien moze zmienic status na gotowe.
+Kurier- Kucharz i admin moga mu przydzielac posilki do rozwożenia dostaje powiadomienie w aplikacji. moze powiadomic klienta o ruszeniu w droge(klient dostaje powiadomienie)
+
+ZADANIE 8:
+1. Instalacja Redmine + konfiguracja podstawowego flow.
+2. Biblioteka do komunikacji pomiędzy aplikacją desktopową a Redmine API.
+3. Aplikacja (okno) w WPF (lub WinForms lub jakakiekolwiek inne
+rozwiązanie), która będzie prezentować podstawowe dane z Redmine -
+przy użyciu Redmine API (co będzie pokazywać: patrz punkt 4.a).
+4. Nasza aplikacja ma się otwierać w kontekście TelWin jako okno –
+użytkownik będzie zamykał/otwierał odcinek.
+4.a. W aplikacji ma się zapisać:
+- Kto otworzył/zamknął (aktualny użytkownik)
+- Kiedy
+- Dlaczego – pole notatki
+4.b. Odcinek zamknięty można tylko otworzyć, odcinek otwarty można
+tylko zamknąć.
+4.c. Otwarcie/zamknięcie odcinka ma również wysterować odpowiednim
+sygnałem na serwerze OPC (nie należy się bać tego skrótu - banalna
+sprawa).
+5. Dodatkowo ma być dostępne okno modalne z listą wszystkich
+otwarć/zamknięć, wyświetlające historię wszystkich operacji związanych
+z otwieraniem/zamykaniem odcinków. W zasadzie sam Redmine mógłby
+prezentować taką listę - może pokazalibyśmy po prostu okno
+przeglądarki?
+
+ZADANIE 9:
+wykonanie sterowników wyświetlacza lcd z interfejsem DSI do podłączenia do komputera BananaPi BPI-M2M.
+
+ZADANIE 10:
+wykonanie programu magazynowego proste operacje magazynowe (PW,RW, PZ,RZ, korekty, definicja kartotek i inne potrzebne do prowadzenia magazynu).
+Dodatkowe wymagania: aplikacja desktop (WindowsForms .NET, MSSQL, użycie kontrolerk DevEXPRESS 18.2).
+
+ZADANIE 11:
+pętli zawięrającej nowy parametr konfigurowalny z menu aplikacji.
+
+ZADANIE 12:
+aplikacji mobilnej w języku C# przy użyciu narzędzia Xamarin. Aplikacja miałaby na celu umożliwienie sledzenie innego urządzenia mobilnego. Projekt powinien dzielić się na 2 części, tj część dla opiekuna i częśc dla podopiecznego.
+Obie części powinny umożliwiać tworzenie konta użytkownika, tworzenie harmonogramów(co należy wykonać w danym dniu i o jakich godzinach dodatkowo możliwośc stworzenia wpisów na każdy dzień- przypomnienia)
+Część dla opiekuna dodatkowo powinna umożliwiać:
+- śledzenie aktualnej lokalizacji połączonych kont podopiecznych
+- szybkie przełączanie się pomiędzy podopiecznymi i ich podgląd na mapie
+- wgląd w "trasy" podopiecznych
+- dodawanie, modyfikowanie i podglądanie harmonogramów podopiecznych
+- tworzenie "bezpiecznych stref" dla podopiecznych
+- umożliwienie komunikacji z wybranym podopiecznym bezpośrednio z aplikacji(czat/smsy)
+- możliwość wyznaczenia trasy do aktualnie wyświetlanego na mapie podopiecznego
+- możliwośc umieszczenia na mapie wszystkich znaczników aktualnej lokalizacji dla każdego podopiecznego
+- po kliknięciu na znacznik podopiecznego mógłby pojawiac się "dymek" z informacjami o nim
+Część dla podopiecznego dodatkowo powinna umożliwiać:
+- udostępnianie lokalizacji(zapisywanie do bazy np firebase lub inna działająca na zasaidzie realtime)
+- podanie nr kontaktowego do opiekuna
+- informowanie opiekuna smsami o wejściu lub wyjściu z bezpiecznej strefy
+- tworzenie, modyfikowanie i podgląd swojego harmonogramu
+- informowanie o "nadchodzących" wpisach w harmonogramie
+- podgląd swojej lokalizacji na mapie.
+Aplikacja na windowsa powinna umożliwiać to co część  dla opiekuna w aplikacji mobilnej
+Czego oczekuje na koniec:
+- aplikacji napisanych w języku C# dla windowsa oraz C# + Xamarin dla Androida,
+- kodu źródłowego wraz z komentarzami w nim
+- opisy wykorzystywanych komponentów/rozwiązań(np api google maps, firebase etc)
+- specyfikacja techniczna rozwiązania
+
+ZADANIE 13:
+oteksturowanej kostki rubika w programie Qt Creator w języku C++, którą można obracać.
+
+ZADANIE 14:
+programu do przechwytywania wpisywanych adresów url w popularnych przeglądarkach internetowych (firefox, ie, chrome, opera) oraz przechwytywanie adresów url stron w przypadku kliknięcia/przejścia na kolejne podstrony.
+
+ZADANIE 15:
+ napisanie aplikacji dedykowanej dla drukarki firmy dnp. Coś jak program Infoprinter tylko z funkcją manipulacji stanu licznika na dany PC
+ 
+ZADANIE 16:
+program który bedzie generował hasła
+
+ZADANIE 17:
+program, który wczytuje trzy wybrane przeze mnie pliki tekstowe o nazwach (1,2 i list).
+List czyli cała lista,
+1 i 2 pliki o tych nazwach zawierają te same linie co w całej liście. Tylko, że wyodrębnione przeze mnie wcześniej. Chodzi o to, aby po wczytaniu tych trzech plików tekstowych, program usunął linie z pliku tekstowego o nazwie ''list', a następnie zapisał ten plik tekstowy jako ''Listnewstampdate'' czyli np. ''ListNew21.06.2019-19.00''. Linie znajdujące się w 1 i 2 nie mogą znajdować się w pliku tekstowym ''list''.
+Programik pod Windowsa 7 z prostym GUI.
+
+ZADANIE 18:
+Async CRUD platorm using jtable.org etc to be hosted on an internal IIS, updating from a .csv with export options. Preferably written in C# / MVC
+
+ZADANIE 19:
+Develop an app for rent payments.
+Need an app that will be able to receive weekly, bi- weekly, and monthly rent payments. Automatic withdrawals from tenants bank account or charge card, automatic late charges if tenant is late. ( 24 hour grace period) Send a  Reminder to tenants 48 hours before rent due date.
+Tenants can request repairs from any device with detailed information, including photos and videos. I want to be able to notify tenants about the status of repairs and contractor visits.  App must work on both android and iPhone devices. 
+
+ZADANIA 20:
+Tidy up to corporate standards and add error handling for expected error scenarios when this bash script runs in automated manner.  It allows a filesystem called /aim to point to  a larger file system which is created by getting space from yet another file system
+ #backup existing aim
+mv /aim /tmp/aim
+# unmount existing aim folder
+umount /aim
+#unmount the file system
+#check if file system in use before shrinking
+fuser -cu /local/102718
+# Developer, add step here to log and exit if file system in use 
+#
+umount /local/102718
+
+#perform file system check before shrinking
+e2fsck -f /dev/mapper/vg-data-lv_local_102718
+#resize to get back 12GB
+resize2fs /dev/mapper/vg-data-lv_local_102718 223G
+#reduce the file system
+lvreduce -L 223G /dev/mapper/vg-data-lv_local_102718
+# perform file system check again
+e2fsck -f /dev/mapper/vg-data-lv_local_102718
+# mount file system with reduced size
+mount /local/102718
+#create new file system under vg_data
+lvcreate  -L 10G -n lv_aim vg_data
+#create new fs which has 10Gb size
+mkfs.ext4 /dev/mapper/vg-data-lv_aim
+#create mount point
+mkdir /export/aim
+#updating fstab with new aim
+# add below entries in fstab
+# Developer how to add below to fstab without command line ?
+/dev/mapper/vg-data-lv_aim 
+/export/ext4 nodev 1 2
+/export/aim /aim none bind,default 0  0
+#mount the new file system
+mount -a
+
+#copy old backup to new aim
+mv /tmp/aim/* /export/aim  
+
+ZADANIE 21:
+We would like a function to be written in C# for reading and then updating the field values in a given Custom Metadata Type.  The function should use any of the Salesforce APIs (Tooling, Metadata, etc.).
+This should be a standalone function which we can then plug into our own applications.  It does not need to do anything other than as stated above.
+For purposes of testing - please include a C# console application that uses this function
+
+ZADANIE 22:
+This is a desktop application saved as an exe file.
+Please see the pdf and watch the videos for full details - see https://www.dropbox.com/sh/spkqxv8tynob2yk/AAD7uOnPBY1MzNjKE5kY0Tvsa?dl=0
+SUMMARY OF REQUIREMENTS FOR THIS JOB:
+The final version of this desktop application is to be run as an exe file from a dropbox (or a drive on the computer).
+Each user is able to customise their version ie the path to files etc, which is save. 
+The source files of the final version is to remain our property. 
+Our developer, whom has written a number of applications for us over many years has unfortunately not been able to complete the latest version of our bespoke software due personal reasons.
+Most of the development has been completed, the software is working and just needs some corrections and functionality additions to the code.
+We have all the source files which need to be recompiled first. 
+-- This software is written in C#
+Developer requirements:
+- Must be 100% fluent in English
+- Experience in desktop applications development
+- Experience in working with and development in pdf & image manipulation
+- I will need to chat with you and share my screen in order to show you the errors and requirements on the current version of PDFmaker
+
+ZADANIE 23:
+Program a controller with STM-32 uc and 4.3" TFT touch Display
+
+ZADANIE 24:
+przygotowanie programu/aplikacji docelowo również na telefon do obslugi bazy danych i procesów "W Naszej" Agencji Pracy.
+Program od początku czyli od zgłoszenia pracownika powinien archiwizowac jego dane , mieć możliwosci generowania dokumentów wprowadzonych wedlug wzoru uzupelniając dane pracownika , przygotowywac raporty , rozliczenia , informacje o wybranych grupach ... przekazywac powiadomienia o kończących się terminach ważności dokumentów pobytu obcokrajowócw, wstepny zarys/zdaniem struktura programu:
+Pulpit
+- powiadomienia
+
+Baza  pracowników
+- lista
+- dodaj / edytuj
+- rozliczenie pracownika
+- zarządzanie dokumentami pracownika
+- zakwaterowanie pracownika
+- wprowadzanie godzin przepracowanych
+
+Kwatery
+- lista
+- dodaj / edytuj
+- podsumowanie kwatery
+
+Kontrakty
+- lista kontraktów
+- dodaj / edytuj ( w tym dodawanie firm )
+- lista kontraktów z wolnymi miejscami
+
+Rekrutacja
+- lista agencji
+- dodaj / edytuj agencję
+- konwersacje
+- raporty rekrutera
+
+Biuro
+- wypłaty pracowników
+- premie rekruterów
+- historia pracownika
+- raport tygodniowy
+
+Dokumenty
+- wzory
+- dokumenty pracowników
+- oświadczenia
+
+Użytkownicy systemu
+- admini
+- rekruterzy
+- koordynatorzy
+
+Słowniki / Ustawienia
+
+ZADANIE 25:
+połączenie API systim & fakturomania
+
+ZADANIE 26:
+wykonanie serwisu katalog Firm i produktow w wersji wielojezycznej.
+Serwis musi byc powiazany z tlumaczami , ma to dzialac na zasadzie Firma wstawia opis nastepnie tlumacz np jezyk X  otrzymuje  wiadomosc ze pojawil sie wpis ,po czym  dokonuje tlumaczenia na dany jezyk.
+Serwis musi posiadac rozne opcje typu promowanie,itp.
+
+ZADANIE 27:
+Projekt polegałby na zautomatyzowaniu wyszukiwania konkretnych przetargów wg. naszych kryterów znajdujących się w Biuletyn Informacji Publicznej (BIP) i wyszukaniu w nich konkretnych danych w załączonych plikach do przetargu, które jeżeli będą zgodne z naszymi wytycznymi, zostaną eksportowane do naszego systemu CRM.
+Przeszkody: 
+- Bardzo duża baza danych (https://www.bip.gov.pl/subjects - samych samorządów terytorialnych jest ok 3k stron www)
+- Każda strona ma inną konstrukcję
+- Specyfikacja zamówienia, w której znajdują się dane kwalifikujące przetarg do dalszej obróbki znajdują się w różnego rodzaju plikach: Spakowane w zip/rar, pdf, doc, skany itp.
+- często przetargi też mają kolejne zakładki, np. do progów unijnych 30 tys Euro, powyżej 30 tys Euro, itd
+Kolejną częścią jest eksport pozyskanych danych do systemu CRM (Pipedrive) i utworzenie nowej szansy sprzedaży
+Projekt wymaga pełnej kastomizacji.
+
+ZADANIE 28:
+programu, który zczyta mi listę obecności (z podpisami) z kartki papieru i wklei mi do exela na którym pracuję ( rozliczam czas pracy)
+
+ZADANIE 29:
+serwis i rozbudowę aplikacji web opartych na frameworku codeigniter w modelu HMVC
+
+ZADANIE 30:
+usuwaniu watermarka ze zdjęć produktów w sklepie postawionym na WordPressie i pluginie AliDropship
+
+ZADANIE 31:
+Stack: GO, Kafka, Microservices, Event Sourcing, Code management; Code review; OOP; Unit tests; messaging patterns (queues/topics); JIRA, Jenkins, Grafana, SonarQube, Code Coverage 80%
+
+ZADANIE 32:
+ programu dla wypożyczalni aut. Program ma zawierać: - bazę klientów - bazę aut - kalendarz dostępności - generator umów Na podstawie danych ma się generować umowa najmu auta, z regulaminem, protokołem zdawczo - odbiorczym auta, następnie wszystko klient podpisuje za pomocą tabletu a wszystkie dokumenty zostają wysłane na jego e-mail. 
+ 
+ZADANEIE 33:
+sterownika XSLT dla pliku XML (IAI Downloader) 
+
+ZADANIE 34:
+integrator pomiędzy subkiekt gt, a Iai-shop, który będzie przenosił następujące informacje dwustronnie:
+Po stronie panelu iai-shop
+- klienci
+- towary
+- ceny, stany magazynowe
+- zamówienia, 
+_ faktury
+- rozliczenia
+Po stronie Subiekt
+Po wypisaniu Zamówienia ZK  - żeby było widoczne w panelu klienta po stronie sklepu.
+Po wypisaniu faktury, żeby była widoczna po stronie panelu do pobrania pdf, dodatkowo powiadomieni mailowe o wystawionej fakturze
+Rozliczenia - to co w subiekt gt, widoczne po stronie panelu klienta iai-shop
+Integracja live, co zmienione w subiekt gt, natychmiast widoczne po stronie panelu. To samo odnośnie zamówień w panelu klienta, wywołuje automatyczną rezerwację w Subiekt
+
+ZADANIE 35:
+aplikacji mobilnej na Android. Aplikacja ma zawierać np.:
+- rejestracja i logowanie klienta
+- wybór usługi wraz z ceną (kosmetyka, fryzjerstwo, stylizacja paznokci)
+- kalendarz wolnych terminów
+- możliwość zapisania się
+
+ZADANIE 36:
+Zbudowanie aplikacji do obsługi klienta, ładowanie zdjęć przez klienta , możliwość płatności elektronicznych, przypomnienia, umawianie spotkań i wideokonferencje.
+
+ZADANIE 37:
+wykonanie zintegrowanego instalatora Windows 7 i Windows 10 Instalator ma byc bezobsługowy ,po wybraniu botowania z usb i wybraniu dysku ma zaistalowac system bez zadawania dodatkowych pytan ( odpowiedzi na pytania które zadaje dostarcze) ma miec zintegrowany klucz wifi i automatycznie wypełnic nazwe uzytkownika , ma tez automatycznie zainstalowac 7 programów, a nastepnie uruchomic wybrana strone internetowa
+
+ZADANIE 38:
+programu do nadzoru i kontroli produkcji, oraz do zarządzania magazynem w branży automotive.
+1. Zarządzanie częściami do produkcji (półproduktami) gospodarka magazynowa na wejściu.
+2. Część projektowa - inżynier produkcji (osoba opisuję dokładnie sposób wykonania produktu, podaje ilości potrzebnych fabrykatów, załącza do programu szkice i zdjęcia poglądowe).
+3. Część produkcyjna - na tym etapie pracownik pordukcji korzystając z dostępnych w programie materiałów (napisanych w części projektowej) wykonuje produkt. Głównym zadaniem programu w tej części jest zliczenie ilości wytworzonych produktów w określonym czasie.
+4. Kontrola jakości - kontroler sprawdzając jakość dopuszcza towar do sprzedaży lub cofa go do poprawy - następuję kolejna ewidencja i rozliczenie części produkcyjnej.
+5. Gospodarka magazynowa na wyjściu.
+6. Ważnym elementem programu powinna być możliwość weryfikacji i oceny poszczególnych procesów produkcyjnych z naciskiem na pkt 3. 
+Zależy mi na współpracy z osobą która już tworzyła podobny projekt z dużą bazą danych.
+Proponuje wynagrodzenie za wykonanie projektu i udział w zyskach z przedswięwziecia (10%).
+Zależy mi na stałej i długofalowej współpracy, dlatego preferuję osoby z woj. śląskiego lub małopolskiego.
+Proszę o przesłanie na maila propozycji w jakim języku programowania proponują Państwo napisanie programu, z wytłumaczeniem dlaczego taki został wybrany. Wykluczam aplikacje webowe. Proszę również o zaproponowanie wykorzytanej do tego celu bazy danych. Porszę poamiętać, że poza danymi metrycznymi i opisowymi w bazie znajdą się również szkice i zdjęcia.
+
+ZADANIE 39:
+Sybase PowerBuilder oraz Sybase ASA / ASE do wsparcia i utrzymania w ruchu aplikacji klienta.
+
+ZADANIE 40:
+aplikacji z ogłoszeniami wykorzystującą geolokalizację z możliwością oceny użytkowników, oraz podstawową grafikę
+
+ZADANIE 41:
+wykonanie aplikacji do wystawiania faktur: API, backend, frontend, layout. Wystawianie faktur, dodawanie klientów, dodawanie faktur kosztowych, pobieranie danych z GUS, różne opcje dla faktur, itd. Funkcjonalność jak w każdym programie do wystawiania faktur.
+
+ZADANIE 42:
+aplikację do wystawiania i drukowania paragonów i faktur na androidzie z możliwością łączenia się do panelu także przez przeglądarkę windows. Konieczna możliwość edycji i rozbudowy o nowe funkcje w późniejszym czasie
+
+ZADANIE 43:
+aplikacji lokalizującej telefon komórkowy po 3 źródłach tj. GPS, (przybliżonej to) BTS oraz IP. Dodatkowa aplikacja powinna pobierać kopię historii sms i historii połączeń.
+
+ZADANIE 44:
+systemu zarządzania pogodą do gry
+
+ZADANIE 45:
+gry na androida typu faller w silniku unity
+
+ZADANIE 46:
+dwóch modułów wpsółpracujących ze sobą: serwera i klienta po WSDL w C++ narzędzie Embarcadero, nie inne. Do szyfrowania, obsługi certyfikatów transmisji, użyte komponenty SecureBlackbox (w razie czego służę drobną pomocą przy implementacji, nie wsystko z nim robiłem) - o ile będą potrzebne.
+Reszta komponentów - standardowe z palety (wersja 10.x.x)
+Do zestawu wymagane przygotowanie testów - dunit.
+Połączenie https - bezpieczne połączenie TLS z obustronnym uwierzytelnieniem (certyfikat serwera i certyfikat klienta)
+Serwer (i klient) obsługuje dwa wywołania
+wyslij, odczytaj
+klient - windows
+Serwer - windows, albo linux (lepiej, o ile to wykonalne)
+serwer - usługa na początku odczytuje plik standard ini/xml z konfiguracją (opis klientów - iP/port, id instalacji - może być kilku)
+błędy serwera zapisywane w pliku log. np. log20190815.log
+Zasada działania:
+dla "wyślij"
+klient - funkcja wysyłająca w module klienta otrzymuje dane w postaci stringa (UnicodeString) dane będą miały kilka kilobajtów szacuję, najcześciej 1, 2 nie więcej niż 10) i Id paczki
+string jest szyfrowany i kodowany do base64.
+klient łączy się do serwera i przesyła:
+1. Id instalacji - string - zdefiniować dla testów
+2. Id paczki - int - otrzymane
+3. adres IP - string - zdefiniować dla testów
+4. port - int - zdefiniować dla testów
+5. dane - kodowane base64 (zaszyfrowany string) - otrzymane
+serwer sprawdza czy wysyłający jest na liście (ip serwera wysyłającego i jego port) parametry faktycznego połączenia
+oraz sprawdza czy przesłane id instalacji jest na liście
+jeśli tak to odbiera przesyłkę, nie to zamyka połączenie albo całkowicie ignoruje próbę połączenia
+zapisuje do (mysql) tabeli np. Tabela1 rekord z polami id instalacji, id paczki (+ pole techniczne id - np. autoinc)
+dekoduje base64, deszufruje do stringa,
+wywyołuje funkcję o nazwie np. xyz z parametrami (danymi przesłanymi, adresem ip, portem), (moja funkcja która coś tam wykona)
+funkcja xyz zwraca status (kod statusu, opis statusu),
+wstawia status do bazy (kod),
+odsyła do klienta status (kod oraz opis),
+klient wywołuje funkcję nadania statusu o nazwie np. abc,
+klient kończy pracę,
+dla "odbierz":
+klient - wysyła żądanie (co 10-20 minut),
+parametr: 1. Id instalacji - string,
+serwer sprawdza czy wysyłający jest na liście - tak jak dla "wyślij"
+sprawdza w talela2 czy są dane do odesłania (dane będą pojawiać się z innej usługi),
+i ewentualnie odsyła,
+status i dane - string zaszyfrowany i zakodowany base64 (o ile dane będą) (nie powienien przekroczyć 50kb),
+odznacza w tabela2 odesłanie danych,
+klient otrzymuje dane,
+dekoduje, odszyfrowuje i wywołuje funkcję np. qwe ze stringiem jako parametrem, (moja funkcja która coś tam wykona)
+ponawia procedurę do czasu otrzymania odpowiedzi - status - nic nie ma,
+do wykoania:
+zaproponowanie WSDL, plik konfiguracyjny serwera standard ini albo xml, zaproponowanie dwóch tabel, zakodowanie ww.
+
+ZADANIE 47:
+pobierać numer telefonu z wybranego ogłoszenia na portalu otodom.pl.
+
+ZADANIE 48:
+Zlecę napisanie programu do tworzenia umów
+Wymagania:
+- mozliwość stworzenia umowy i formatowania tekstu
+- mozliwość zapisania jako Word i pdf
+- mozliwosc wczytania umowy i edycji treści
+- mozliwość umieszczenia w treści zmiennych, które pobierają dane z tabeli, a tabela dane te przechowuje. Wystarczy jedna tabela zawierająca nazwy pól (zmiennych) i ich wartości.
+
+ZADANIE 49:
+Zlecę przeniesienie aplikacji AR na najnowszą wersję Unity oraz Vuforii. Aplikacja obecnie znajduje się na wersjach:
+Unity 5.6.7f1
+Vuforia 6.2
+
+ZADANIE 50:
+Zlecę wykonanie aplikacji okienkowej na Windows w WPF lub podobne.
+- program ma służyć do obsługi zgłoszeń telefonicznych i osobistych, mam bazę osób w pliku .csv(około 3000 adresów) , lista ta musi zostać zamieniona w bazę danych
+- przy zgłoszeniu wpisuję numer osoby i wszukują mi się pełne dane adresowe tej osoby
+- następnie wprowadzam zgłoszenie (kilkanaście pól)
+- zgłoszenie jest zapisywane do bazy
+- w zależności od kilku parametrów automatycznie generowane są dwa różne załączniki ze zgłoszeniem i wysyłane automatycznie na podane adresy mailowe
+
+ZADANIE 51:
+Zagadnienia do oprogramowania:
+1. kompilator/interpreter prostego języka programowania
+2. konwersja wyrażeń arytmetycznych między postaciami: infiksową – prefiksową – postfiksową
+3. konwerter liczb całkowitych i rzeczywistych (zapis zmiennopozycyjny) na i z postaci binarnej z implementacją podstawowych operacji
+4. realizacja stosu i kolejki na listach ze wskaźnikami z własnym menedżerem sterty
+5. tablica z haszowaniem do wyszukiwania danych
+6. iteracyjna i rekurencyjna implementacja wybranych algorytmów (liczby Fibonacciego, quicksort, wieże Hanoi) – porównanie czasów działania
+7. program z podprogramami i bez, z przekazywaniem parametrów przez wartość i referencję – porównanie czasów działania
+8. przekazywaniem parametrów nieustalonych (zmiennej liczby parametrów) – porównanie czasów działania z przekazywaniem stałej liczby parametrów
+9. metody wnioskowania za pomocą podejścia imperatywnego
+10. program obiektowy i proceduralny – porównanie czasów działania
+11. porównanie czasów działania sortowania przez wybór w wersji sekwencyjnej, z podziałem na połówki w realizacji sekwencyjnej i w realizacji współbieżnej (być może ze zrównolegleniem łączenia z sortowaniem)
+12. programowanie deklaratywne – przykłady zastosowań
+13. optymalizacja kodu źródłowego – porównanie czasów działania
+14. różne aspekty użycia obsługi wyjątków
+15. implementacja automatu ze stosem dla prostych gramatyk
+16. implementacja maszyny Turinga
+17. implementacja współbieżna wybranych problemów (5 filozofów, producent konsument itp.)
+
+ZADANIE 52:
+Zlecę wykonanie algorytmu do gry pan(strategiczna karcianka) który niepopełnia błedów, z mechaniką i jakąś prostą, czytelną grafiką.
+
+ZADANIE 53:
+Zlecę zaprojektowanie prostego sterownika solarnego z jego oprogramowaniem - z dokumentacją umożliwiajacą przekazanie produktu do produkcji.
+
+ZADANIE 54:
+Portal ma zczytywac wybrane dane z wybranych stron internetowych co kilka godzin , zapisywac je w bazie danych, robic wykresy; portal dla wielu uzytkownikow, platnosci, ssh.
+
+ZADANIE 55:
+Zlecę napisanie programu do zbierania danych ze wskazanych stron internetowych oraz późniejsze ich przeszukiwanie i eksportowanie do formatu pdf lub csv. 
+Funkcjonalności:  
+1. Zbieranie danych ( web scraping ) wskazanych urli, 
+- chciałbym mieć możliwość podania url, on leci po stronie zbiera danę do bazy oraz szuka  <a href, potem wchodzi na nie i zbiera dane i szuka <a href i tak dalej. Ma wyszukiwać <a href tylko w domenie z głównego url lub z możliwością zaznaczenia żeby szukał poza, możliwość dodania w formie liczby głębokości wyszukiwania, musi sprawdzać czy dana informacja jest już w bazie jeśli tak pomija zbieranie danych ale <a href szuka dalej. Chciałbym mieć możliwość dodania updatu danych, wtedy szuka po wszystkich url, dodaje dane ale z opcją wersjonowania, jeśli coś się zmieniło dodaje wersję 2, w trakcie szukania przeszukuje obie.
+- Podawane URL powinny być widoczne na jednej stronie, z łatwą opcją dodawania, usuwania i modyfikacji. 
+- wszystkie wyszukane URL powinny być na innej stronie także z możliwością usunięcia i modyfikacji,
+- możliwość dodania blacklistowanej frazy w URL przy wpisywaniu i globalnie,
+2. Możliwość wyszukiwania po słowach kluczowych, wprowadzam słowo kluczowe ( jedno lub kilka, łączone za pomocą przecinka lub + ) i wszystkie zebrane dane powinny być możliwe do przeszukania po treści.
+- możliwość zapisania wyszukiwanych fraz, po wejściu w zapisane wyszukiwanie powinienem mieć możliwość powrotu do wyszukiwanych danych oraz odśnieżenia ( z nowo zebranych danych )
+3. Program powinien być obsługiwany z poziomy strony www ( tak samo jak spiderfoot ).
+Powinien mieć możliwość instalacji i obsługi z poziomu linuxa ( np.: Ubuntu ) oraz wykorzystywać tylko elementy darmowe, tak żeby do jego funkcjonowania nie były potrzebne dodatkowe opłaty.
+
+ZADANIE 56:
+

@@ -1,0 +1,307 @@
+/*======== Proforma : EEET2246 Laboratory Test 1 - Arithmetic Calculator ============
+Proforma version number: 2019.001.a
+
+PURPOSE:
+This file is a proforma for the EEET2246 Laboratory Test 1.
+This file defines the assessment task which is worth 6% of course in total - there is no
+other documentation.
+
+At the MINIMUM FUNCTIONAL REQUIREMENTS level, your goal is to write a program that
+takes two numbers from the command line and perform and arithmetic operations with them.
+Additionally your program must be able to take three command line arguments where if the last
+argument is 'a' an addition is performed, and if 's' then subtraction is performed
+with the first two arguments.
+
+At the EXTENDED FUNCTIONAL REQUIREMENTS level you will require you to extend on the
+functionality so that the third argument can also be 'm' for multiplication,'d' for
+division and 'p' for exponential operations, using the first two arguments as the
+operands. Additionally, at this level basic error detection and handling will be required.
+
+The functionality of this lab is relatively simple: + -  / *  ^
+The emphasis in this lab is to achieve the MINIMUM FUNCTIONALITY REQUIREMENTS
+first. If time permits you then should attempt the EXTENDED FUNCTIONALITY REQUIREMENTS
+and develop your code so that it can handle a full range of error detection and handling.
+
+___________________________________________________________________________________________
+___ GENERAL SPECIFICATIONS (common to all three EEET2246 Laboratory Tests):
+
+G1.	You must rename your file to lab1_1234567.cpp, where 1234567 is your student number.
+Your filename MUST NEVER EVER contain any spaces.  _under_score_is_Fine.
+You do not need to include the 's' in front of your student number.
+
+G2.	Edit the name/email address string in the main() function to your student number,
+student email and student name.	The format of the student ID line is CSV (Comma
+Separated Variables) with NO SPACES-
+student_id,student_email,student_name
+When the program is run without any operands i.e. simply the name of the executable such as:
+lab_1234567.exe
+the program MUST print student ID string in Comma Separated Values (CSV) format with no
+spaces. For example the following text should be outputted to the console updated with
+your student details:
+"1234567,s1234567@student.rmit.edu.au,FirstName_LastName"
+
+G3. All outputs are a number or single character error indicator followed by a
+linefeed ( endl or \n).
+
+G4.	DO NOT add more than what is specified. Do NOT add additional information, text or
+comments to the output console.
+
+G5.	DO NOT use 'cin' or gets() type functions. Do NOT ask for user input. All input MUST
+be specified on the command line separated by blank spaces (i.e. use the argv and argc
+input parameters).
+
+G6.	All input and output is case sensitive.
+
+G7.	You should use the Integrated Debugging Environment (IDE) to change input arguments during
+the development process. During the lab tests, the command line window will not be available.
+
+G8.	When your code exits the 'main()' function using the 'return' command then
+you MUST use zero as the return value. This requirement is for exiting
+the 'main()' function ONLY.
+
+G9.	Do NOT put any functions after the 'main()' function - if you write your own functions
+add them BEFORE the 'main()' function. This is a requirement of the Autotester and failure
+to do so will result in the Autotester not compiling your code correctly and loss of marks.
+
+G10.You MUST run this file as part of a Project - No other cpp files should be added
+to your solution.
+
+___________________________________________________________________________________________
+___ MINIMUM FUNCTIONAL REQUIREMENTS:
+
+M1.	For situation where NO command line arguments are passed to your program:
+
+M1.1	Your program must display your correct student details in the format:
+"1234567,s1234567@student.rmit.edu.au,FirstName_LastName"
+
+M2.	For situation where TWO command line arguments are passed to your program:
+
+M2.1	Your program must perform an addition operation, taking the first
+two arguments as the operands and display only the result to the
+console with a new line character.
+
+M3.	For situation where THREE command line arguments are passed to your program:
+
+M3.1	If the third argument is 'a', your program must perform an addition
+operation, taking the first two arguments as the operands and display
+only the result to the console with a new line character.
+
+M3.2	If the third argument is 's', your program must perform a subtraction
+operation, taking the first two arguments as the operands and display
+only the result to the console with a new line character.
+
+M4.	For situation where less than TWO or more than THREE command line arguments are
+passed to your program, your program must display the character 'P' to the console
+with a new line character.
+
+M5.	For specifications M1 to M4 inclusive:
+
+M5.1	Program must return 0 under all situations at exit.
+
+M5.2	Program must be able to handle integer arguments.
+
+M5.3	Program must be able to handle floating point arguments.
+
+M5.4	Program must be able to handle one integer and one floating point
+argument in any order.
+
+Example1: lab1_1234567.exe    10   2    s
+which should return 10 - 2 = 8, i.e. the last (and only) line on the console will be:
+8
+
+Example2: lab1_1234567.exe    10   2
+which should return 10 + 2 = 12, i.e. the last (and only) line on the console will be:
+12
+
+Example3: lab1_1234567.exe    10   4    a
+which should return 10 + 4 = 14, i.e. the last (and only) line on the console will be:
+14
+
+___________________________________________________________________________________________
+___ EXTENDED FUNCTIONAL REQUIREMENTS:
+
+E1.	For situations where THREE command line arguments (other than 'a' or 's') are passed
+to your program:
+
+E1.1	If the third argument is 'm', your program must perform a multiplication
+operation, taking the first two arguments as the operands and display
+only the result to the console with a new line character.
+
+E1.2	If the third argument is 'd', your program must perform a division
+operation, taking the first two arguments as the operands and display
+only the result to the console with a new line character.
+
+E1.3	If the third argument is 'p', your program must perform an exponential
+operation, taking the first argument as the base operand and the second as
+the exponent operand. The result must be display to the console with
+a new line character. Hint: Consider using the pow() function, which has the
+definition:
+double pow(double base, double exponent);
+
+Example2: lab1_1234567.exe    10   2    d
+which should return 10 / 2 = 5, i.e. the last (and only) line on the console will be:
+5
+
+Example4: lab1_1234567.exe    10   2    p
+which should return 10 ^ 2 = 100, i.e. the last (and only) line on the console will be:
+100
+
+___ ERROR HANDLING:
+The following text lists errors you must detect and a priority of testing.
+NB: order of testing is important as each test is slight more difficult than
+the previous test.
+
+E2.	Valid operator input:
+If the third input argument is not a valid operation selection, the output shall be 'V'.
+Valid operators are ONLY (case sensitive):
+a			addition
+s			subtraction
+m			multiplication
+d			division
+p			exponentiation i.e. to the power of:   2 ^ 3 = 8  (base exponent p)
+
+Rhetorical question: Why don't we use: + - * / and ^ ? characters to determine the operation?
+
+E3.	Basic invalid number detection (Required):
+Valid numbers are all numbers that the "average Engineering graduate" in Australia
+would consider valid. Therefore if the first two arguments are not valid decimal
+numbers, the output shall be 'X'. For example:
+1.3			is valid
+3			is valid
+.3			is valid
+ABC123		is not valid
+1.3.4		is not valid
+123abc		is not valid
+
+E4.	Intermediate invalid number detection (NOT TESTED BY AUTOTESTER - for your consideration only):
+If the first two arguments are not valid decimal numbers, the output shall be 'X'.
+Using comma punctuated numbers and scientific formatted numbers are considered valid.
+For example:
+0000.111  	is valid
+3,000		is valid	 - NB: atof() will read this as '3' not as 3000
+1,000.9		is valid	 - NB: atof() will read this as '1' not as 1000.9
+1.23e2		is valid
+2E2			is valid
+e-1			is not valid
+.e3			is not valid
+
+E5.	Advanced invalid number detection (NOT TESTED BY AUTOTESTER - for your consideration only):
+If the first two arguments are not valid decimal numbers, the output shall be 'X'.
+1.3e-1		is valid
+1,00.0		is not valid - NB: atof() will read this as '1' not as 100
++212+21-2	is not valid - NB: mathematical operation on a number of numbers, not ONE number
+5/2			is not valid - NB: mathematical operation on a number of numbers, not ONE number
+
+HINT:  consider the function atof(), which has the definition:   double atof (const char* str);
+Checking the user input for multiple operators (i.e. + or -) is quite a difficult task.
+One method may involve writing a 'for' loop which steps through the input argv[] counting
+the number of operators. This process could also be used to count for decimal points and the like.
+The multiple operator check should be considered an advanced task and developed once the rest
+of the code is operational.
+
+
+E6. Input number range checking:
+All input numbers must be between (and including) +2^16 (65536) or -2^16 (-65536).
+If the operand is out of range i.e. too small or too big, the output shall be 'R'.
+
+LARGE NUMBERS: is 1.2e+999 acceptable input ? what happens if you enter such a number ?
+try and see.
+Hint: #INF error - where and when does it come up ?
+SMALL NUMBERS: is 1.2e-999 acceptable input ? what happens if you enter such a number ?
+try and see. Test it by writing your own test program.
+
+is 1.2e+999 acceptable input ? what happens if you enter such a number ?
+try and see.
+Hint: #INF error - where and when does it come up ?
+is 1.2e-999 acceptable input ? what happens if you enter such a number ?
+try and see. Test it by writing your own test program.
+
+E7.	ERROR checks which will NOT be performed are:
+E7.1	Input characters such as:
+*.*    or /    or \  or  ?
+will not be tested for.
+
+E7.2	Range check: some computer systems accept numbers of size 9999e999999
+while others flag and infinity error. An infinity error becomes an invalid
+input Therefore: input for valid numbers will only  be tested to the maximum
+9.9e99
+
+E8.	Division by zero should produce output 'M'
+
+E9.	ANYTHING ELSE THAT CAN GO WRONG (MURPHY'S LAW TEST):
+If there are any other kinds of errors not covered here, the output
+shall be 'Y'.
+
+Rhetorical question: What for example are the error codes that the Power
+function returns ?  If this happens then the output	shall be 'Y'.
+
+___________________________________________________________________________________________
+___ HINTS:
+
+-	Use debug mode and a breakpoint at the return statement prior to program
+finish in main.
+
+-	What string conversion routines, do you know how to convert strings to number?
+Look carefully as they will be needed to convert a command line
+parameter to a number and also check for errors.
+
+-	ERROR CHECKING: The basic programming rules are simple (as covered in lectures):
+1) check that the input is valid.
+2) check that the output is valid.
+3) if any library function returns an error code USE IT !!! CHECK FOR IT !!!
+
+-	Most conversion routines do have inbuilt error checking - USE IT !!!
+That means: test for the error condition and take some action if the error is true.
+If that means more than 50% of your code is error checking, then that's
+the way it has to be.
+____________________________________________________________________________________________
+*/
+// These are the libraries you are allowed to use to write your solution. Do not add any
+// additional libraries as the auto-tester will be locked down to the following:
+#include "pch.h"  // Required for VS 2017 and the autotester
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+#include <math.h>
+#include <errno.h>   
+// Do NOT Add or remove any #include statements to this project!!
+// All library functions required should be covered by the above
+// include list. Do not add a *.h file for this project as all your
+// code should be included in this file.
+
+using namespace std;
+
+const double MAXRANGE = pow(2.0, 16.0); // 65536
+const double MINRANGE = -pow(2.0, 16.0);
+
+int main(int argc, char *argv[])
+{
+	if (argc == 1)
+	{
+
+		// When run with just the program name (no parameters) your code  MUST print 
+		// student ID string in CSV format. i.e.
+		// "studentNumber,student_email,student_name"
+		// eg: "1234567,s1234567@student.rmit.edu.au,FristName_LastName"
+
+		// No parameters on command line just the program name
+		// Edit string below: eg: "studentNumber,student_email,student_name"
+
+		cout << "2345678,s2345678@student.rmit.edu.au,FristName_LastName" << endl;
+
+
+		// The convention is to return Zero to signal NO ERRORS (please do not change it).
+		return 0; 
+	}
+
+	//--- START YOUR CODE HERE.
+
+	// The convention is to return Zero to signal NO ERRORS (please do not change it).
+	// If you change it the AutoTester will assume you have made some major error. 
+	return 0; 
+}
+
+
+// End of file.
+
+
