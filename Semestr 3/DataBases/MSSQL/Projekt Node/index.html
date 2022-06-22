@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="./styles.css" rel="stylesheet">
+    <script src="codzik.js"></script>
+    
+    <title>Projekt 2 luty 2022!</title>
+  </head>
+  <body>
+    <p id="pierwszyP">Projekt Bazy Danych = Damian Roszak i Daniel Zdanewicz</p>
+  
+  <div id="inputs"> 
+   <div id="dane_random">
+      <input type="text" id="rand_no" pattern="\d+" placeholder = " ILE REKORDÓW WYLOSOWAĆ">
+      <button onclick="randomData()">Dane losowe</button>
+      <button id="random" onclick="randomDane()">Random</button>
+      <button id="q" onclick="saveDataRachunek()">saveDataRachunek</button>
+      <button id="qw" onclick="poka()">poka</button>
+   </div>    
+   <div id="operacjeSQL"> 
+        <button onclick="Insert()">Insert</button>
+        <button onclick="Update()">Update</button>
+        <button onclick="Usun()">Usuń</button>
+        <button onclick="Select()">Select</button>   
+   </div>
+  
+  <div class="app-wrapper">
+    <button onclick="createTable()">Stwórz tabelę</button>
+    <button onclick="endConnection()">Zakończ połączenie</button>
+    <button onclick="promiseExample()">Przykład promise</button>
+    <button onclick="parametersExample()">Przykład query z parametrami</button>
+    <button onclick="getFields()"> Pobierz wszystkie dane z tabeli</button>
+    <div id="div"></div>
+  </div>
+  
+  <div>
+    <button onclick="insertData()"> Dodaj Dane </button>
+    <button onclick="selectData()"> Wyświetl dane</button>
+    <button onclick="deleteAllFromTab()"> Czyść tabelę </button>
+  </div>
+  </div>  
+  
+  
+  <div id="outputs"> 
+   <table id="data_table_klient" class="data-table"> </table>
+   <table id="data_table_Rachunek" class="data-table"> </table>
+  
+  </div>
+  
+  </body>
+</html>

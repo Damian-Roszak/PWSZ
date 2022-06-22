@@ -1,0 +1,1 @@
+[{"id_klienta":"54970","typ_rachunku":"Konto ROR","stan":"04389","czyUsuniete":"TRUE"},{"id_klienta":"33815","typ_rachunku":"Konto ROR","stan":"63989","czyUsuniete":"TRUE"},{"id_klienta":"79853","typ_rachunku":"Kredyt","stan":"06464","czyUsuniete":"TRUE"}]
