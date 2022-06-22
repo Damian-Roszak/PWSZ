@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 5 - zad 1</title>
+    <! <link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+Zad2b: <div id="b"> </div>
+
+
+<!-- <button type="button" onclick="f2()">Random</button> -->
+
+<script>       
+let nf1 = 0, nf2 = 1, nextFib;
+divb = document.getElementById("b");
+function f2() { 
+     let wynik2;
+    divb.innerHTML += " " + nf1;
+            nextFib = nf1 + nf2;
+            nf1 = nf2;
+            nf2 = nextFib;
+}
+
+document.addEventListener("keydown",
+function(){
+document.getElementById("b").innerHTML +=
+" " + nf1;
+            nextFib = nf1 + nf2;
+            nf1 = nf2;
+            nf2 = nextFib;
+}
+);
+
+</script>
+</div>
+</body>
+</html>

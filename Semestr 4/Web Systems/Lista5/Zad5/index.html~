@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 5 - zad 3</title>
+<style>
+/*div#L5z3e   width: 200px;
+  height: 100px;
+    overflow: scroll;
+  */
+  
+div#L5z3e
+{
+  border: 1px solid black;
+ width: 200px;
+  height: 100px;
+    overflow: scroll;
+}
+</style>
+</head>
+<body>
+ 
+ <div id="a">Lista 5 - zad 5 </div>
+<div id="L5z5">
+<img src="eu.jpg" width="600" height="500">
+
+<H1 id="inf">Nagłówek do zmiany </H1>
+</div>
+
+
+
+<script>
+
+
+//let divek = document.getElementById('inf');
+let divek = document.querySelector('img');
+divek.addEventListener('mousemove', naMysz);
+let a = document.getElementById('a');
+let b = document.getElementById('inf');
+function naMysz(e){
+
+    if(e.target.tagName == 'IMG'){
+        e.target = "X=" + e.clientX + " Y= " + e.clientY;
+        //e.currentTarget
+       a.innerHTML = "aX=" + e.clientX + " Y= " + e.clientY;
+       if((e.clientX > 352 && e.clientX < 435) && ( e.clientY > 303 && e.clientY < 387)) b.innerHTML = "POLSKA";
+       if((e.clientX > 428 && e.clientX < 571) && ( e.clientY > 337 && e.clientY < 437)) b.innerHTML = "UKRAINA";
+       if((e.clientX > 158 && e.clientX < 263) && ( e.clientY > 446 && e.clientY < 515)) b.innerHTML = "HISZPANIA";
+       if((e.clientX > 170 && e.clientX < 250) && ( e.clientY > 230 && e.clientY < 368)) b.innerHTML = "WIELKA BRYTANIA";
+       if((e.clientX > 14 && e.clientX < 117) && ( e.clientY > 115 && e.clientY < 182)) b.innerHTML = "ISLANDIA";
+       
+            // b.innerHTML = "BBBBBBBX=" + e.clientX + " Y= " + e.clientY;
+       //else b.innerHTML = "";
+
+    }
+}
+
+
+
+</script>
+</div>
+</body>
+</html>

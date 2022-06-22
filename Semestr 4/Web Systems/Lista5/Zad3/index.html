@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 5 - zad 3</title>
+<style>
+/*div#L5z3e   width: 200px;
+  height: 100px;
+    overflow: scroll;
+  */
+  
+div#L5z3e
+{
+  border: 1px solid black;
+ width: 200px;
+  height: 100px;
+    overflow: scroll;
+}
+</style>
+</head>
+<body>
+ <div id="a">Lista 5 - zad 3a </div>
+    <button id="przycisk">Zmieniam kolor</button>
+<br><br>
+ <div id="a">Lista 5 - zad 3b </div>
+<div id="L5z3b">Zmieniam rame </div> 
+ 
+<br><br>
+ <div id="a">Lista 5 - zad 3c </div>
+<div id="L5z3c">Zmieniam rame </div> 
+<form action="index.html">
+  <label for="fname">tekst do zmiany:</label>
+  <input type="text" id="fname" name="fname"><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+<br><br>
+ <div id="a">Lista 5 - zad 3d </div>
+<div id="L5z3d">Znikjający artykuł
+<article> ZNIKAM </article>
+</div> 
+ 
+ 
+<br><br>
+ <div id="a">Lista 5 - zad 3e </div>
+<div id="L5z3e">Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>Zmiana koloru przy przewijaniu na czerwony<br>
+Zmiana koloru przy przewijaniu na czerwony<br>
+
+</div> 
+ 
+ 
+<br><br>
+ <div id="a">Lista 5 - zad 3f </div>
+<div id="L5z3f">
+<H1>Nagłówek do zmiany </H1>
+</div>
+ 
+
+
+<script>
+
+window.onload = (event) => {
+let l = document.querySelector("H1");
+l.innerHTML =  'strona załadowana';
+};
+
+let przewijak = document.getElementById("L5z3e");
+//let przewijak =  document.querySelector('div');
+//let przewijak =  document.getElementsByName('body');
+przewijak.addEventListener("scroll", zmKolor);
+function zmKolor(e){
+
+    if(e.target.tagName == 'DIV'){
+        e.target.style.color = "red";
+    }
+}
+
+let art = document.getElementById('L5z3d');
+//divek = document.querySelector('div');
+function zMysz(e){
+let r = Math.round(Math.random()*(25+1));
+    if(e.target.tagName == 'ARTICLE'){
+        e.target.style.display= "none";
+
+    }
+}
+art.addEventListener('mouseout', zMysz);
+
+
+
+let inpek = document.getElementById('fname');
+//divek = document.querySelector('div');
+function inpucik(e){
+let r = Math.round(Math.random()*(850+1));
+    if(e.target.tagName == 'INPUT'){
+        e.target.style.width = r;
+
+    }
+}
+inpek.addEventListener('change', inpucik);
+
+
+let divek = document.getElementById('L5z3b');
+//divek = document.querySelector('div');
+function naMysz(e){
+let r = Math.round(Math.random()*(25+1));
+    if(e.target.tagName == 'DIV'){
+        e.target.style.border= r+"px solid";
+
+    }
+}
+divek.addEventListener('mouseover', naMysz);
+
+
+section = document.querySelector('button');
+function click(e){
+
+let r = Math.round(Math.random()*(255+1));
+let g = Math.round(Math.random()*(255+1));
+let b = Math.round(Math.random()*(255+1));
+    if(e.target.tagName == 'BUTTON'){
+        e.target.style.backgroundColor= "rgb("+r+","+g+","+b+")";
+
+    }
+}
+section.addEventListener('click', click);
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 5 - zad 2</title>
+    <! <link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+Zad2a: <div id="a"> </div>
+<button type="button" onclick="f1()"> buttona</button>
+<script>
+
+diva = document.getElementById("a");
+let n1 = 0, n2 = 1, nextTerm;
+
+function f2(){
+    setInterval(f1, 200);
+}
+function f1()
+{
+            diva.innerHTML += " " + n1;
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+
+}
+</script>
+</div>
+</body>
+</html>

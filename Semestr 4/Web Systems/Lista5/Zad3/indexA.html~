@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 5 - zad 1</title>
+    <! <link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+Zad2a: <div id="a"> </div>
+
+<script>
+var x = document.getElementById('sekcja');
+x.addEventListener("mouseover", nad);
+x.addEventListener("click", klik);
+x.addEventListener("mouseout", z);
+function nad() {
+document.getElementById('output').innerHTML += "Nad<br>"
+}
+function klik() {
+document.getElementById('output').innerHTML += "Klik<br>"
+}
+function z() {
+document.getElementById('output').innerHTML += "z<br>"
+}
+
+</script>
+</div>
+</body>
+</html>

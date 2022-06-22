@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSW Lista 5 - zad 1</title>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="stylesheet" type="text/js" href="skrpt.js">
+</head>
+<body>
+Zad1a: <div id="a"> </div>
+<br>
+Zad1b: <div id="b"> </div>
+
+
+<button type="button" onclick="f1()">Random</button>
+
+<script>
+  function f1() { 
+    let wynik1 = Math.round(Math.random()*(5518+1));
+    //Math.floor(Math.random() * (max - min)) + min;
+    diva = document.getElementById("a");
+    diva.innerHTML = wynik1;
+    
+    let wynik2 = Math.round(Math.random()*(5518+1));
+    let mnoznik = Math.round(Math.random()*(5518+1));
+    if (mnoznik % 2 == 0) wynik2 *= -1;
+    divb = document.getElementById("b");
+    divb.innerHTML = wynik2;
+    
+    
+}
+
+</script>
+</div>
+</body>
+</html>
