@@ -1,0 +1,11 @@
+C:\Users\Damian\Documents\NET\Lista4\chart\bin\Debug\chart.exe.config
+C:\Users\Damian\Documents\NET\Lista4\chart\bin\Debug\chart.exe
+C:\Users\Damian\Documents\NET\Lista4\chart\bin\Debug\chart.pdb
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.csproj.AssemblyReference.cache
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.csproj.SuggestedBindingRedirects.cache
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.Form1.resources
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.Properties.Resources.resources
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.csproj.GenerateResource.cache
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.exe
+C:\Users\Damian\Documents\NET\Lista4\chart\obj\Debug\chart.pdb
