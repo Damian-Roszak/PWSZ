@@ -1,0 +1,11 @@
+C:\Users\Damian\Documents\NET\Lista4\L4z3\bin\Debug\L4z3.exe.config
+C:\Users\Damian\Documents\NET\Lista4\L4z3\bin\Debug\L4z3.exe
+C:\Users\Damian\Documents\NET\Lista4\L4z3\bin\Debug\L4z3.pdb
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.csproj.AssemblyReference.cache
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.Form1.resources
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.Properties.Resources.resources
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.csproj.GenerateResource.cache
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.exe
+C:\Users\Damian\Documents\NET\Lista4\L4z3\obj\Debug\L4z3.pdb
