@@ -1,0 +1,25 @@
+Czym jest React JS?
+React jest tak zwaną biblioteką języka programowania JavaScript. Wykorzystuje się ją podczas tworzenia interfejsów użytkownika dla różnego typu aplikacji. Dostępna jest dla szerokiego grona odbiorców na zasadzie open source. Dzięki niej możesz więc stworzyć bardzo złożony interfejs, składający się z małych, oddzielonych od siebie elementów. Warto podkreślić, że React JS został stworzony przez Jordana Walke – pracownika Facebooka, któremu przyświecała idea uproszczenia procesu budowania całego interfejsu oraz zapewnienie użytkownikom większej wygody podczas obsługi aplikacji. 
+
+Biblioteka React wykorzystuje nowoczesny sposób renderowania stron internetowych. Dzięki temu stają się one bardziej dynamiczne. Sprawia to, że framework ten stanowi niezwykle innowacyjne podejście w programowaniu. Jest wygodny zarówno dla samego twórcy – programisty, jak i dla końcowego użytkownika, czyli odbiorcy aplikacji. 
+
+Jak prawidłowo nazywać React JS?
+Wciąż w kręgach programistów toczy się dyskusja, czy React JS to framework, czy biblioteka? Okazuje się jednak, że nie istnieje tak proste i jednoznaczne rozróżnienie. Frameworkiem można określić podejście do rozwiązywania problemów architektonicznych i strukturalnych związanych z kodem aplikacji. Z kolei React JS jest bardziej podejściem opierającym się o komponenty. W efekcie programista przejmuje kontrolę nad całym sposobem wdrażania rozwiązania. Jednakże React nie rozwiązuje wspomnianych wyżej problemów architektonicznych i strukturalnych. Mimo to jest mocno rozbudowany. Można więc skłonić się ku podejściu, że React w większej części jest biblioteką. 
+
+Zalety React JS – dlaczego warto z niego korzystać?
+React JS posiada wiele zalet, docenianych zarówno przez programistów, jak i użytkowników. Do najważniejszych należy szybkość jego implementacji, która jest zdecydowanie większa niż w przypadku innych rozwiązań tego typu. Co więcej, React JS umożliwia zbudowanie niezwykle dynamicznego interfejsu. Dzięki temu aktualizacje strony mają miejsce natychmiast (dzieją się w czasie rzeczywistym) i są na bieżąco zauważane przez użytkowników. Przynosi to również korzyści programiście, który w szybszy sposób może prowadzić swoje działania – efektywniej pracować z obiektami interfejsu, poprawiając całą wydajność. Taki rezultat udało się osiągnąć twórcom React JS dzięki temu, że biblioteka używa swojej własnej abstrakcyjnej kopii – Virtual DOM, która aktualizuje nawet najmniejsze zmiany, jednocześnie nie wpływając na pozostałe części całego interfejsu. 
+
+Inną mocno zaznaczającą się zaletą React jest możliwość zaoszczędzenia czasu podczas prac programistycznych. Budowa komponentowa pozwala na ponowne wykorzystanie poszczególnych elementów na innym poziomie. Zwiększa to wydajność pracy programisty i umożliwia sprawne zarządzanie aktualizacjami. Ponieważ wszystkie komponenty są izolowane, jedna zmiana nie niesie za sobą kolejnych. Całość procesu kierowania nimi staje się więc łatwiejsza niż podczas operowania na innych rozwiązaniach. 
+
+W tworzeniu wszelkiego rodzaju aplikacji ważna jest także stabilność kodu. W przypadku pracy z JS zyskujesz gwarancję jednokierunkowego przepływu danych, który sprawia, że kod jest stabilny. Podobnie jak wyżej, to możliwość pracy z poszczególnymi komponentami sprawia, że zmianie nie ulegają pozostałe komponenty oraz całe struktury. Oznacza to, że w całym systemie elementy potomne nie wpływają na elementy nadrzędne. Właśnie to powoduje, że możemy powiedzieć, że kod jest stabilny. By zmienić wybrany obiekt, developer musi zmienić jego stan i wprowadzić aktualizację. Wtedy transformacji ulega jedynie wytypowany komponent. Trzeba przy tym podkreślić, że przepływ danych w React JS przebiega tylko w jednym kierunku: góra-dół. 
+
+Podsumowując – jakie jeszcze zalety niesie za sobą React JS? 
+
+Komponenty JS mogą być używane wielokrotnie. 
+JS jest wszechstronny i może być używany z dowolnie wybranym frameworkiem. 
+Oferuje wysoką wydajność, ponieważ jest oparty na domenie wirtualnej. 
+Wykorzystuje jednokierunkowy przepływ danych. 
+Umożliwia budowę dynamicznego interfejsu. 
+Jest prosty w obsłudze, dlatego mogą z niego korzystać początkujący programiści.  
+Witryny oparte o React JS mają pozytywny wpływ na SEO, ponieważ szybkość strony jest jednym z czynników branych pod uwagę w rankingu Google. 
+Jest stabilnym rozwiązaniem, ponieważ stoi za nim duża społeczność, która nieustannie się rozwija.
