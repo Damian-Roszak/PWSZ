@@ -1,0 +1,33 @@
+﻿.pay {
+    margin-right: 25px;
+}
+.produkt{
+    font-size: 45px;
+}
+.segment {
+    width: 100%;
+    float: left;
+}
+.obrazek{
+    width:20%;
+    height:100%;
+    float:left;
+}
+.opis {
+    width:20%;
+    float:left;
+}
+.stan {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.kup {
+    width: 84px;
+    float: left;
+    margin: 20px;
+    height: 51px;
+}
+.kup > Button {
+    margin: 20px;
+}
