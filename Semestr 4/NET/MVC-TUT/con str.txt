@@ -1,0 +1,1 @@
+metadata=res://*/Models.MVCTutModel.csdl|res://*/Models.MVCTutModel.ssdl|res://*/Models.MVCTutModel.msl;provider=System.Data.SqlClient;provider connection string="data source=DESKTOP-HOFG0VJ\MSSQLSERVER01;initial catalog=master;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
