@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Osoby>
+  <Osoba>
+    <id>1</id>
+    <Imie>Piotr</Imie>
+    <Nazwisko>Sobieski</Nazwisko>
+    <Wiek>111</Wiek>
+  </Osoba>
+  <Osoba>
+    <id>2</id>
+    <Imie>Edward</Imie>
+    <Nazwisko>Jagiełło</Nazwisko>
+    <Wiek>125</Wiek>
+  </Osoba>
+  <Osoba>
+    <id>3</id>
+    <Imie>Łukasz</Imie>
+    <Nazwisko>Pliszka</Nazwisko>
+    <Wiek>135</Wiek>
+  </Osoba>
+  <Osoba>
+    <id>0</id>
+    <Imie>Piotr</Imie>
+    <Nazwisko>Skiba</Nazwisko>
+    <Wiek>140</Wiek>
+  </Osoba>
+  <Osoba>
+    <id>4</id>
+    <Imie>Daniel</Imie>
+    <Nazwisko>Skiba</Nazwisko>
+    <Wiek>149</Wiek>
+  </Osoba>
+</Osoby>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1250"?>
+
+<FILMY>
+
+<FILM id="1">
+	<TYTUŁ>Tytuł Filmu o id1</TYTUŁ>
+	<ROK_PRODUKCJI>1999</ROK_PRODUKCJI>
+	<REŻYSER>Franek Dolas</REŻYSER>
+<AKTORZY>
+	<AKTOR>
+		<POSTAć>Bohater1</POSTAć>
+		<IMIę>Jan</IMIę>
+		<NAZWISKO>Nowak</NAZWISKO>
+	</AKTOR>
+	<AKTOR>
+		<POSTAć>Bohater2</POSTAć>
+		<IMIę>Marek</IMIę>
+		<NAZWISKO>Kowalski</NAZWISKO>
+	</AKTOR>
+</AKTORZY>
+	<PRODUKCJA>POLSKA</PRODUKCJA>
+</FILM>
+
+
+<FILM id="2">
+	<TYTUŁ>Tytuł Filmu o id2</TYTUŁ>
+	<ROK_PRODUKCJI>2000</ROK_PRODUKCJI>
+	<REŻYSER>Zenon Szprycha</REŻYSER>
+<AKTORZY>
+	<AKTOR>
+		<POSTAć>Bohater3</POSTAć>
+		<IMIę>Anna</IMIę>
+		<NAZWISKO>Muszka</NAZWISKO>
+	</AKTOR>
+	<AKTOR>
+		<POSTAć>Bohater4</POSTAć>
+		<IMIę>HANS</IMIę>
+		<NAZWISKO>KLOSS</NAZWISKO>
+	</AKTOR>
+</AKTORZY>
+	<PRODUKCJA>NIEMCY</PRODUKCJA>
+</FILM>
+
+</FILMY>
