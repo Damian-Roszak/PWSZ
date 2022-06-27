@@ -1,0 +1,15 @@
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\bin\Debug\net6.0\ConsoleApp1 Watek p3.exe
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\bin\Debug\net6.0\ConsoleApp1 Watek p3.deps.json
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\bin\Debug\net6.0\ConsoleApp1 Watek p3.runtimeconfig.json
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\bin\Debug\net6.0\ConsoleApp1 Watek p3.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\bin\Debug\net6.0\ConsoleApp1 Watek p3.pdb
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.csproj.AssemblyReference.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.AssemblyInfoInputs.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.AssemblyInfo.cs
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\refint\ConsoleApp1 Watek p3.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.pdb
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ConsoleApp1 Watek p3.genruntimeconfig.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek p3\obj\Debug\net6.0\ref\ConsoleApp1 Watek p3.dll

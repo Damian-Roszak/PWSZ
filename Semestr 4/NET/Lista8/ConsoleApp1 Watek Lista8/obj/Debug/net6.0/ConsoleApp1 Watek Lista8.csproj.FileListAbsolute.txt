@@ -1,0 +1,15 @@
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\bin\Debug\net6.0\ConsoleApp1 Watek Lista8.exe
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\bin\Debug\net6.0\ConsoleApp1 Watek Lista8.deps.json
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\bin\Debug\net6.0\ConsoleApp1 Watek Lista8.runtimeconfig.json
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\bin\Debug\net6.0\ConsoleApp1 Watek Lista8.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\bin\Debug\net6.0\ConsoleApp1 Watek Lista8.pdb
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.csproj.AssemblyReference.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.AssemblyInfoInputs.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.AssemblyInfo.cs
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\refint\ConsoleApp1 Watek Lista8.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.pdb
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ConsoleApp1 Watek Lista8.genruntimeconfig.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watek Lista8\obj\Debug\net6.0\ref\ConsoleApp1 Watek Lista8.dll

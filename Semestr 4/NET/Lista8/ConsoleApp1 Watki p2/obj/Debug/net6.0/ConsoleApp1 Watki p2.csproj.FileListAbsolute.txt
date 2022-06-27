@@ -1,0 +1,15 @@
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\bin\Debug\net6.0\ConsoleApp1 Watki p2.exe
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\bin\Debug\net6.0\ConsoleApp1 Watki p2.deps.json
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\bin\Debug\net6.0\ConsoleApp1 Watki p2.runtimeconfig.json
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\bin\Debug\net6.0\ConsoleApp1 Watki p2.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\bin\Debug\net6.0\ConsoleApp1 Watki p2.pdb
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.csproj.AssemblyReference.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.AssemblyInfoInputs.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.AssemblyInfo.cs
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\refint\ConsoleApp1 Watki p2.dll
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.pdb
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ConsoleApp1 Watki p2.genruntimeconfig.cache
+C:\Users\Damian\Documents\NET\ConsoleApp1 Watki p2\obj\Debug\net6.0\ref\ConsoleApp1 Watki p2.dll
