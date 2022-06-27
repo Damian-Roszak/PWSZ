@@ -1,0 +1,5 @@
+C:\Users\Damian\Documents\NET\WpfApp1 Lista 8\obj\Debug\net6.0-windows\WpfApp1 Lista 8.csproj.AssemblyReference.cache
+C:\Users\Damian\Documents\NET\WpfApp1 Lista 8\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Damian\Documents\NET\WpfApp1 Lista 8\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Damian\Documents\NET\WpfApp1 Lista 8\obj\Debug\net6.0-windows\WpfApp1 Lista 8_MarkupCompile.cache
+C:\Users\Damian\Documents\NET\WpfApp1 Lista 8\obj\Debug\net6.0-windows\WpfApp1 Lista 8_MarkupCompile.lref
