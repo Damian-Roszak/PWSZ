@@ -1,0 +1,406 @@
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
+import java.net.*;
+import java.util.HashSet;
+
+class KartkaPapieru extends JComponent {
+    Color KOLOR = new Color((int) (Math.random() * 0x1000000));
+    int szer = 350;    int wys = 400;    int skok = 40;
+    int x = 150;    int y = 50;
+    boolean slad = false;
+    boolean gum = false;
+    public int ileKw = 0;
+    //obiekt pamięci
+    class TPam {
+        int x, y;
+
+        public String toString() {
+            return Integer.toString(x) + ";" + Integer.toString(y);
+        }
+    }
+
+    //kolekcja obiektów pamięci
+    HashSet<TPam> pam = new HashSet<TPam>();
+
+    public KartkaPapieru() {
+        setPreferredSize(new Dimension(szer, wys));
+        //setBackground(Color.PINK);
+        ileKw++;
+        System.out.println("ileKw: "+ileKw);
+    }
+
+    public void addRec(Color K) {
+            ileKw++;
+    }
+
+
+    public void reset() {
+        pam.clear();
+    }
+
+    public void zap() {
+        TPam p = new TPam();
+        p.x = x + 10;
+        p.y = y + 10;
+        pam.add(p);
+    }
+
+    public void gumka() {
+        TPam tmp = new TPam();
+        tmp.x = x;
+        tmp.y = y;
+        System.out.println("gumka before: " + tmp);
+        if (pam.contains(tmp)) {
+            System.out.println("gumka  inside tmp: " + tmp);
+            pam.remove(tmp);
+        }
+        for (TPam o : pam) {
+            if (o.x == tmp.x && o.y == tmp.y) {
+                System.out.println("gumka inside : SUkces");
+                break;
+            }
+        }
+    }
+
+    public void paintComponent(Graphics rysowanyObszar) {
+        super.paintComponent(rysowanyObszar);
+
+        for(int i=0; i<ileKw; i++){
+            rysowanyObszar.setColor(KOLOR);
+            rysowanyObszar.fillRect(x, y, 40, 40);
+                System.out.println("\ni: " + i);
+        }
+/*
+        rysowanyObszar.setColor(new Color((int) (Math.random() * 0x1000000)));
+        rysowanyObszar.fillRect(x + 50, y + 50, 40, 40);
+        rysowanyObszar.setColor(new Color((int) (Math.random() * 0x1000000)));
+        rysowanyObszar.fillRect(x + 150, y + 50, 40, 40);
+*/
+
+        if (pam.size() != 0) rysujSlad(rysowanyObszar);
+            //System.out.println("paintComponent PO: " + x + " ; " + y);
+        if (gum != false) gumka();
+    }
+
+    public void wczytajSlad() {
+        int Itmp;
+        String Stmp;
+        String[] arrOfStr;
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+        int result = fileChooser.showOpenDialog(this);//new JDialog()
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            try {
+                FileReader obslugaOdczytu = new FileReader(selectedFile);
+                BufferedReader buforOdczytu = new BufferedReader(obslugaOdczytu);
+                String pojedynczyWiersz = null;
+                pam.clear();
+                while ((pojedynczyWiersz = buforOdczytu.readLine()) != null) {
+                    System.out.println(pojedynczyWiersz);
+                    arrOfStr = pojedynczyWiersz.split(";");
+                    TPam p = new TPam();
+                    p.x = Integer.parseInt(arrOfStr[0]);
+                    p.y = Integer.parseInt(arrOfStr[1]);
+                    pam.add(p);
+                }
+                buforOdczytu.close();
+                if (pam.size() != 0) rysujPam();
+            } catch (IOException exc) {
+                exc.printStackTrace();
+                System.exit(1);
+            }
+        }
+    }
+
+    public void rysujPam() {
+        repaint();
+    }
+
+    public void zapiszSlad() {
+        JFrame parentFrame = new JFrame();
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Określ plik do zapisu...");
+        int userSelection = fileChooser.showSaveDialog(parentFrame);
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+            try {
+                FileWriter obslugaZapisu = new FileWriter(fileToSave);
+                BufferedWriter buforZapisu = new BufferedWriter(obslugaZapisu);
+                String pojedynczyWiersz = null;
+
+                for (TPam i : pam) {
+                    pojedynczyWiersz = i.toString() + "\n";
+                    buforZapisu.append(pojedynczyWiersz);
+                    System.out.println(pojedynczyWiersz);
+                }
+
+                buforZapisu.close();
+            } catch (IOException exc) {
+                exc.printStackTrace();
+                System.exit(1);
+            }
+            System.out.println("Zapis jako plik: " + fileToSave.getAbsolutePath());
+        }
+    }
+
+    public void rysujSlad(Graphics rysowanyObszar) {
+        for (TPam i : pam) {
+            rysowanyObszar.setColor(Color.YELLOW);
+            rysowanyObszar.fillRect(i.x, i.y, 20, 20);
+            System.out.println("rysujSlad IN: " + i.x + " ; " + i.y);
+        }
+    }
+
+    public void lewo() {
+        if ((x - 5) > 0) {
+            if (slad) zap();
+            x = x - skok;
+            repaint();
+        }
+    }
+
+    public void prawo() {
+        if ((x + 45) < szer - 2) {
+            if (slad) zap();
+            x = x + skok;
+            repaint();
+        }
+
+    }
+
+    public void gora() {
+        if ((y - 15) > 0) {
+            if (slad) zap();
+            y = y - skok;
+            repaint();
+        }
+    }
+
+    public void dol() {
+        if ((y + 42) < wys) {
+            if (slad) zap();
+            y = y + skok;
+            repaint();
+        }
+    }
+
+    public void sl(boolean stan) {
+        slad = stan;
+    }
+
+    public void gu(boolean stan) {
+        gum = stan;
+    }
+}
+class DzienDobryProtocol{
+    private static final int OCZEKIWANIE = 0;
+    private static final int WYSLANODZIENDOBRY = 1;
+    private static final int WYSLANOODPOWIEDZ = 2;
+    private int stan = OCZEKIWANIE;
+    private int licznik = 0;
+    public int getLicznik(){return licznik;}
+    public String PrzetwarzajWejscie(String Wejscie){
+        String DoZwrotu = null;
+        licznik++;
+
+        if (stan == OCZEKIWANIE){
+            DoZwrotu = "Dzień dobry";
+            stan = WYSLANODZIENDOBRY;
+        }
+        else if(stan == WYSLANODZIENDOBRY){
+            if(Wejscie.equalsIgnoreCase("Dzien Dobry")){
+                DoZwrotu = "Bardzo mi miło powitać - kontynuujemy (TAK/NIE)?";
+                stan = WYSLANOODPOWIEDZ;
+            }
+            else{
+                DoZwrotu = "Wypadalo by grzecznie odpowiedziec na powitanie - kontynuujemy? (TAK/NIE)";
+                stan = WYSLANOODPOWIEDZ;
+            }
+        }
+
+    else if(stan == WYSLANOODPOWIEDZ){
+        if(Wejscie.equalsIgnoreCase("Tak")){
+            DoZwrotu = "Dzien Dobry";
+            stan = WYSLANODZIENDOBRY;
+        }
+        else{
+            DoZwrotu = "Do widzenia";
+        }
+    }
+    return DoZwrotu;
+}}
+class WatekSerweraDzienDobry extends Thread{
+    // TUTAJ KONIEC !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    private Socket socket = null;
+    KartkaPapieru kw = new KartkaPapieru();
+    //KartkaPapieru kw ;
+    String[] arrOfStr;
+    String btn, wrt;
+    public WatekSerweraDzienDobry(Socket socket, KartkaPapieru rys){
+        super("WatekSerweraDzienDobry");
+        this.socket = socket;
+        System.out.println("Słucham.");
+        kw = rys;
+        kw.setVisible(true);
+        kw.ileKw++;
+        rys.ileKw++;
+    }
+
+    public void run(){
+        try{
+            PrintWriter wyjscie = new PrintWriter(socket.getOutputStream(), true);
+            BufferedReader wejscie = new BufferedReader (new InputStreamReader (socket.getInputStream()));
+            String CiagWejsciowy, CiagWyjsciowy;
+            DzienDobryProtocol ObslugaRozmowy = new DzienDobryProtocol();
+            CiagWyjsciowy = ObslugaRozmowy.PrzetwarzajWejscie(null);
+            wyjscie.println(CiagWyjsciowy);
+            System.out.println(ObslugaRozmowy.getLicznik());
+
+            kw.ileKw++;
+            while((CiagWejsciowy = wejscie.readLine()) != null)
+            {
+               // kw.lewo();
+               // CiagWyjsciowy = ObslugaRozmowy.PrzetwarzajWejscie(CiagWejsciowy);
+                wyjscie.println(CiagWyjsciowy);
+
+                arrOfStr  = CiagWejsciowy.split(":");
+                btn = arrOfStr[0];
+                wrt = arrOfStr[1];
+                //programik.rys.lewo();
+                if (btn.equalsIgnoreCase("lewo")) {
+                    System.out.println("Funkcja lewo: "+btn +"="+wrt);
+                    kw.lewo();
+                }
+                else if (btn.equalsIgnoreCase("gora")){
+                    System.out.println("Funkcja lewo: "+btn +"="+wrt);
+                    kw.gora();
+                }
+                else if (btn.equalsIgnoreCase("dol")) {
+                    System.out.println("Funkcja lewo: " + btn + "=" + wrt);
+                    kw.dol();
+                }
+                else if (btn.equalsIgnoreCase("prawo")) {
+                    System.out.println("Funkcja lewo: " + btn + "=" + wrt);
+                    kw.prawo();
+                }
+                else if (btn.equalsIgnoreCase("slad")){
+                    System.out.println("Funkcja lewo: " + btn + "=" + wrt);
+                    if(wrt.equalsIgnoreCase("true")) kw.sl(true);
+                    else kw.sl(false);
+                }
+                else if (btn.equalsIgnoreCase("reset")){
+                    System.out.println("Funkcja lewo: " + btn + "=" + wrt);
+                    kw.reset();
+                }
+                else if (btn.equalsIgnoreCase("zapisz")) {
+                    System.out.println("Funkcja lewo: " + btn + "=" + wrt);
+                    kw.zapiszSlad();
+                }
+                else if (btn.equalsIgnoreCase("wczytaj")) {
+                    System.out.println("Funkcja lewo: " + btn + "=" + wrt);
+                    kw.wczytajSlad();
+                }
+                else if (btn.equalsIgnoreCase("gumuj")) {
+                    System.out.println("Funkcja lewo: " + btn + "=" + wrt);
+                    if(wrt.equalsIgnoreCase("true")) kw.gu(true);
+                    else kw.gu(false);
+                }
+
+                //if(CiagWyjsciowy.equals("Do widzenia"))   break;
+            }
+            wyjscie.close();
+            wejscie.close();
+            socket.close();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
+/////////////////////////////////
+
+class Panel extends JFrame {
+    KartkaPapieru rys;
+
+    ServerSocket DzienDobrySerwerSocket = null;
+    boolean nasluch = true;
+
+    Panel(){
+        super("Serwer: ");
+        rys = new KartkaPapieru();
+
+        setSize(500, 500);
+        Container panel = getContentPane();
+        JPanel panel_gora = new JPanel();
+        panel_gora.setBackground(Color.GREEN);
+        JPanel panel_dol = new JPanel();
+
+        panel.add(BorderLayout.WEST, panel_gora);
+        panel.add(panel_dol);
+        panel_dol.setLayout(new BoxLayout(panel_dol, BoxLayout.Y_AXIS));
+        panel_gora.setLayout(new BoxLayout(panel_gora, BoxLayout.Y_AXIS));
+
+        panel_dol.add(rys);
+
+        setContentPane(panel);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //rys.setVisible(true);
+
+        try{
+            DzienDobrySerwerSocket = new ServerSocket(4444);
+        }
+        catch(IOException e){
+            System.err.println("Nie można otworzyć portu: 4444.");
+            System.exit(-1);
+        }
+    }
+    public void start(){
+        while(nasluch){
+            try{
+                rys.ileKw++;
+                new WatekSerweraDzienDobry(DzienDobrySerwerSocket.accept(), rys).start();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
+        try{
+            DzienDobrySerwerSocket.close();
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+
+////////////////////////////////////
+
+public class Main{
+
+    public static void main(String[] args){
+        Panel serwer = new Panel();
+        serwer.setVisible(true);
+        serwer.start();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
